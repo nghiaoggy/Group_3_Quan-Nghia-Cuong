@@ -1,0 +1,64 @@
+/* ----------------------------------------------------------
+    Setting Color
+   ----------------------------------------------------------*/
+:root {
+    --black: #000000;
+    --black-light: #242424;
+    --red: #ff0000;
+    --gray: #888888;
+    --white: #ffffff;
+}
+
+/* ----------------------------------------------------------
+    Custom Property
+   ----------------------------------------------------------*/
+
+/* Scroll Custom */
+/* ::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--black-light);
+    margin: 2rem 0 2rem 0;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray);
+    border-radius: 10px;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+a,
+dl,
+dt,
+dd,
+ol,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+}
+
+/* ----------------------------------------------------------
+    Main
+   ----------------------------------------------------------*/
