@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/style.css" rel="stylesheet">
-  <link rel="shortcut icon" href="./asset/logo/1.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./asset/logo/3.png" type="image/x-icon">
   <!-- Main CSS--------------------------------------------------------------------------------------------->
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/responsive.css">
@@ -15,104 +15,6 @@
   <!-- Bootstrap 5 CSS-------------------------------------------------------------------------------------->
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 
-
-</head>
-
-<body>
-  <section>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-
-          <a class="navbar-brand" href="./asset/logo/1.png">IM</a>
-
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">Service</a>
-              <a class="nav-link" href="#">Service Detail</a>
-              <a class="nav-link" href="#">Contact</a>
-
-            </div>
-          </div>
-
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-
-        </div>
-
-
-      </nav>
-    </header>
-  </section>
-
-  <section>
-    <div class="main_container">
-      <section class="slider">
-        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-              aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="..." class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </section>
-
-    </div>
-  </section>
-
-  <section>
-    <footer>
-
-    </footer>
-  </section>
-
-
-
-
   <!-- Main JS---------------------------------------------------------------------------------------------->
   <script src="./js/main.js"></script>
   <!-- Extra Libraries--------------------------------------------------------------------------------------->
@@ -120,6 +22,384 @@
   <script defer src="./node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
   <script defer src="./node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
   <script defer src="./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
+</head>
+
+<body>
+  <div> </div>
+  <!-- Navbar -------------------------------------------------------------------------------------------------------------->
+  <section>
+    <header class="p-3 bg-black text-white fixed-top">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <img src="./asset/logo/4.png" alt="logo" style="width: 40px;height: 40px">
+          </a>
+
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">Serivce</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">Contact</a></li>
+          </ul>
+
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+          </form>
+
+          <div class="text-end">
+            <button id="search" type="button" class="btn btn-outline-light me-2">Search</button>
+            <button id="login" type="button" class="btn btn-warning" data-bs-toggle="modal"
+              data-bs-target="#loginModal">Sign in</button>
+          </div>
+
+        </div>
+      </div>
+    </header>
+    <!-- Login Modal-------------------------- -->
+    <div id="loginModal" class="modal fade" role="dialog" aria-hidden="true" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered text-black">
+        <div class="modal-content">
+          <form action="">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal Login Form</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="Username">Username<span class="text-danger">*</span></label>
+                <input type="text" name="username" class="form-control" id="Username" placeholder="Enter Username">
+              </div>
+
+              <div class="mb-3">
+                <label for="Password">Password<span class="text-danger">*</span></label>
+                <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password">
+              </div>
+              <div class="mb-3">
+                <input class="form-check-input" type="checkbox" value="" id="remember" required>
+                <label class="form-check-label" for="remember">Remember Me</label>
+                <a href="#" class="float-end">Forgot Password</a>
+              </div>
+            </div>
+            <div class="modal-footer pt-4 ">
+              <button type="button" class="btn btn-success mx-auto w-100 bg-warning text-black">Login</button>
+            </div>
+            <p class="text-center">Not yet account, <a href="#">Signup</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- Main Body -------------------------------------------------------------------------------------------------------------->
+
+  <section>
+    <div class="container-fluid">
+
+      <!-- Slider-------------------------------------------------------------------------------------------------->
+      <section>
+        <div id="slider" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="carousel-text w-100 h-100 d-flex justify-content-center align-items-center text-white">
+                <h2 class="display-4 pb-5 fw-bold d-block"> Welcome to our house care serivce</h2>
+              </div>
+
+              <video class="img-fluid" autoplay loop muted>
+                <source src="./asset/video/s1.mp4" type="video/mp4">
+              </video>
+
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-text w-100 h-100 d-flex justify-content-center align-items-center text-white">
+                <h1 class="display-4 pb-5 fw-bold"> Busy in Work Life? Don't have Enough Time for Cleaning?</h1>
+              </div>
+              <video class="img-fluid" autoplay loop muted>
+                <source src="./asset/video/s2.mp4" type="video/mp4">
+              </video>
+
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-text w-100 h-100 d-flex justify-content-center align-items-center text-white">
+                <h1 class="display-4 pb-5 fw-bold"> So many house care operation without real time review?</h1>
+              </div>
+              <video class="img-fluid" autoplay loop muted>
+                <source src="./asset/video/s3.mp4" type="video/mp4">
+              </video>
+
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Body-------------------------------------------------------------------------------------------------->
+      <div class="container-fluid">
+        <!-- Promo 1-------------------->
+        <div class="promo1 p-5 mb-5">
+          <div class="container clearfix">
+            <div class="row align-items-center">
+              <div class="col-12 col-lg">
+                <h3 style="letter-spacing: 2px;">Start repair your Sweet Home with us</h3>
+                <span>We strive to provide Our Customers with Top Notch Support to make their Theme</span>
+              </div>
+              <div class="col-12 col-lg-auto mt-4 mt-lg-0">
+                <a href="#" class="button button-large button-circle button-black m-0">Start Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Promo 2-------------------->
+        <div class="promo2 p-5 mb-5">
+          <div class="container clearfix">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+              <div class="col">
+                <div class="card h-100 border-0">
+                  <img src="./asset/img/p1.jpg" class="card-img-top rounded-3" alt="...">
+                  <div class="card-body ">
+                    <h4 class="card-title">Skilled Professionals</h4>
+                    <h10 style="color:var(--color-prime)"> Your Property in Good Hands.</h10>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, debitis aperiam
+                      doloribus repellendus culpa voluptas excepturi exercitationem neque in velit suscipit minima earum
+                      dolore dolores quia itaque. Nostrum, maxime consectetur?</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100 border-0">
+                  <img src="./asset/img/p1.jpg" class="card-img-top rounded-3" alt="...">
+                  <div class="card-body ">
+                    <h4 class="card-title">Effective Planning</h4>
+                    <h10 style="color:var(--color-prime)"> Construction Process Organized</h10>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, debitis aperiam
+                      doloribus repellendus culpa voluptas excepturi exercitationem neque in velit suscipit minima earum
+                      dolore dolores quia itaque. Nostrum, maxime consectetur?</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100 border-0">
+                  <img src="./asset/img/p1.jpg" class="card-img-top rounded-3" alt="...">
+                  <div class="card-body ">
+                    <h4 class="card-title">Risk Management</h4>
+                    <h10 style="color:var(--color-prime)"> We have got you Covered</h10>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, debitis aperiam
+                      doloribus repellendus culpa voluptas excepturi exercitationem neque in velit suscipit minima earum
+                      dolore dolores quia itaque. Nostrum, maxime consectetur?</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Customer Parallax---------->
+        <div class="promo3 parallax mb-5 w-100 ">
+          <div class="container-fluid justify-content-center align-items-center">
+            <div
+              class=" parallax-text h-100 w-100 p-0 d-flex flex-column justify-content-center align-items-center text-center text-wrap">
+              <img src="./asset/avatar/a1.png" alt="" srcset="" style="max-width: 75px ;max-height: 75px">
+              <h2 class=""> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, accusantium perferendis quas
+                voluptatem nemo fugiat hic, magnam, facere iusto voluptatibus inventore. </h2>
+              <h3> - Anh Quan</h3>
+              <h5> Mindx Inc.</h5>
+            </div>
+            <div class=" parallax img-fluid "></div>
+          </div>
+        </div>
+
+        <!-- Service Feature------------>
+        <div class="promo4 mb-5 border-bottom">
+          <div class="container">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 g-4 py-5">
+              <div class="col d-flex flex-row gap-4">
+                <div class="feature-icon text-warning col-2">
+                  <a><i class="fa-solid fa-money-bill-1-wave fa-4x"></i></a>
+                </div>
+                <div class="feature-text col-10">
+                  <h5>Cost Effective Solutions</h5>
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam atque quia quod deserunt sunt amet
+                    autem dignissimos quas velit voluptatem eum, pariatur maiores, nemo alias fuga vitae omnis fugit
+                    eaque.</p>
+                </div>
+              </div>
+
+              <div class="col d-flex flex-row gap-4">
+                <div class="feature-icon text-warning col-2">
+                  <a><i class="fa-solid fa-building-columns fa-4x"></i></i></a>
+                </div>
+                <div class="feature-text col-10">
+                  <h5>Finance Assistance</h5>
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam atque quia quod deserunt sunt amet
+                    autem dignissimos quas velit voluptatem eum, pariatur maiores, nemo alias fuga vitae omnis fugit
+                    eaque.</p>
+                </div>
+              </div>
+
+              <div class="col d-flex flex-row gap-4">
+                <div class="feature-icon text-warning col-2">
+                  <a><i class="fa-solid fa-brush fa-4x"></i></i></a>
+                </div>
+                <div class="feature-text col-10">
+                  <h5>Quality Infrastructure</h5>
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam atque quia quod deserunt sunt amet
+                    autem dignissimos quas velit voluptatem eum, pariatur maiores, nemo alias fuga vitae omnis fugit
+                    eaque.</p>
+                </div>
+              </div>
+
+              <div class="col d-flex flex-row gap-4">
+                <div class="feature-icon text-warning col-2">
+                  <a><i class="fa-solid fa-people-group fa-4x"></i></i></a>
+                </div>
+                <div class="feature-text col-10">
+                  <h5>Quality workmanship</h5>
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam atque quia quod deserunt sunt amet
+                    autem dignissimos quas velit voluptatem eum, pariatur maiores, nemo alias fuga vitae omnis fugit
+                    eaque.</p>
+                </div>
+              </div>
+
+              <div class="col d-flex flex-row gap-4">
+                <div class="feature-icon text-warning col-2">
+                  <a><i class="fa-solid fa-credit-card fa-4x"></i></i></i></a>
+                </div>
+                <div class="feature-text col-10">
+                  <h5>Payment Convenience</h5>
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam atque quia quod deserunt sunt amet
+                    autem dignissimos quas velit voluptatem eum, pariatur maiores, nemo alias fuga vitae omnis fugit
+                    eaque.</p>
+                </div>
+              </div>
+
+              <div class="col d-flex flex-row gap-4">
+                <div class="feature-icon text-warning col-2">
+                  <a><i class="fa-solid fa-money-bill-1-wave fa-4x"></i></a>
+                </div>
+                <div class="feature-text col-10">
+                  <h5>Cost Effective Solutions</h5>
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam atque quia quod deserunt sunt amet
+                    autem dignissimos quas velit voluptatem eum, pariatur maiores, nemo alias fuga vitae omnis fugit
+                    eaque.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Selection---------->
+        <div class="serviceSelect">
+          <div class="container-fluid px-4 py-5" id="home_service">
+            <h1 class="display-4 text-center"> Our Services</h1>
+            <div class="row row-cols-1 row-cols-lg-4 align-items-stretch g-4 py-5">
+
+              <div class="col">
+                <a class="text-decoration-none" href="">
+                  <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('./asset/img/c1.jpg'); background-size: cover;opacity: 0.8;">
+                    <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
+                      <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Repair</h2>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col">
+                <a class="text-decoration-none" href="">
+                  <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('./asset/img/c2.jpg'); background-size: cover;opacity: 0.8">
+                    <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
+                      <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Maintaining</h2>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col">
+                <a class="text-decoration-none" href="">
+                  <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('./asset/img/c3.jpg'); background-size: cover;opacity: 0.8;">
+                    <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
+                      <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Cleaning</h2>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col">
+                <a class="text-decoration-none" href="">
+                  <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                    style="background-image: url('./asset/img/c4.jpg'); background-size: cover;opacity: 0.8">
+                    <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
+                      <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Assemble </h2>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -------------------------------------------------------------------------------------------------------------->
+  <section>
+    <footer class="my-md-2 bg-black text-white border-top container-fluid p-5 m-0 justify-content-center align-items-center ">
+      <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-3">
+        <div class="col">
+          <img class="mb-2" src="./asset/logo/2.png" alt="" width="100" height="100">
+          <small class="d-block mb-3 text-muted">© 2017–2021</small>
+          <h4>Home Care Project</h4>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>Adress: </span> Tầng 6 - Số
+                22 Thành Công - quận Ba Đình - Hà Nội </a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>Contact: </span> +84586954854
+              </a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>License: </span> 3DEC 7.0
+              </a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <img style="height:300px; width: 100%;" src="./asset/img/map.png">
+          </ul>
+        </div>
+        <div class="col">
+          <h3> Follow Us </h3>
+          <ul class=" list-group list-unstyled text-small list-group-horizontal gap-2">
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                  class="fa-brands fa-facebook-square fa-2xl"></i></a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                  class="fa-brands fa-instagram-square fa-2xl"></i></a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                  class="fa-brands fa-twitter-square fa-2xl"></i></a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                  class="fa-brands fa-google-plus-square fa-2xl"></i></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </footer>
+  </section>
+
+
+
+
+ 
 </body>
 
 </html>
