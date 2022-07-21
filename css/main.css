@@ -60,8 +60,11 @@ a {
 }
 
 body{
+    color: #555;
+    line-height: 1.5;
     overflow: hidden;
     overflow-y: scroll;
+    font-family: Lato,sans-serif;
 }
 
 /* ----------------------------------------------------------
@@ -140,6 +143,7 @@ body{
 
 .promo3{
     position: relative;
+    box-sizing: border-box;
 }
 
 .promo3 .parallax  {
@@ -155,7 +159,7 @@ body{
     
 }
 
-.parallax-text{
+.promo3 .parallax-text{
     color: var(--color-text);
     position: absolute;
     background-color: rgba(0, 0, 0, 0.8);
@@ -165,14 +169,18 @@ body{
     row-gap: 1rem;
 }
 
+.serviceSelect > col:hover {
+    color: var(--color-prime) !important;
+} 
+
 /* ----------------------------------------------------------
     Footer
    ----------------------------------------------------------*/
 
    footer{
-        height: 500px;
         width: 100%;
         margin: 0 !important;
         display: flex !important;
         box-sizing: border-box !important;
+
    }

@@ -15,10 +15,17 @@
   <!-- Bootstrap 5 CSS-------------------------------------------------------------------------------------->
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 
-
+  <!-- Main JS---------------------------------------------------------------------------------------------->
+  <script src="./js/main.js"></script>
+  <!-- Extra Libraries--------------------------------------------------------------------------------------->
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script defer src="./node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
+  <script defer src="./node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
+  <script defer src="./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
 </head>
 
 <body>
+  <div> </div>
   <!-- Navbar -------------------------------------------------------------------------------------------------------------->
   <section>
     <header class="p-3 bg-black text-white fixed-top">
@@ -40,12 +47,46 @@
 
           <div class="text-end">
             <button id="search" type="button" class="btn btn-outline-light me-2">Search</button>
-            <button id="login" type="button" class="btn btn-warning">Sign in</button>
+            <button id="login" type="button" class="btn btn-warning" data-bs-toggle="modal"
+              data-bs-target="#loginModal">Sign in</button>
           </div>
+
         </div>
       </div>
     </header>
+    <!-- Login Modal-------------------------- -->
+    <div id="loginModal" class="modal fade" role="dialog" aria-hidden="true" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered text-black">
+        <div class="modal-content">
+          <form action="">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal Login Form</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="Username">Username<span class="text-danger">*</span></label>
+                <input type="text" name="username" class="form-control" id="Username" placeholder="Enter Username">
+              </div>
 
+              <div class="mb-3">
+                <label for="Password">Password<span class="text-danger">*</span></label>
+                <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password">
+              </div>
+              <div class="mb-3">
+                <input class="form-check-input" type="checkbox" value="" id="remember" required>
+                <label class="form-check-label" for="remember">Remember Me</label>
+                <a href="#" class="float-end">Forgot Password</a>
+              </div>
+            </div>
+            <div class="modal-footer pt-4 ">
+              <button type="button" class="btn btn-success mx-auto w-100 bg-warning text-black">Login</button>
+            </div>
+            <p class="text-center">Not yet account, <a href="#">Signup</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
 
 
   </section>
@@ -61,7 +102,7 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="carousel-text w-100 h-100 d-flex justify-content-center align-items-center text-white">
-                <h1> Welcome to our service</h1>
+                <h2 class="display-4 pb-5 fw-bold d-block"> Welcome to our house care serivce</h2>
               </div>
 
               <video class="img-fluid" autoplay loop muted>
@@ -71,7 +112,7 @@
             </div>
             <div class="carousel-item">
               <div class="carousel-text w-100 h-100 d-flex justify-content-center align-items-center text-white">
-                <h1> Welcome to our service</h1>
+                <h1 class="display-4 pb-5 fw-bold"> Busy in Work Life? Don't have Enough Time for Cleaning?</h1>
               </div>
               <video class="img-fluid" autoplay loop muted>
                 <source src="./asset/video/s2.mp4" type="video/mp4">
@@ -80,7 +121,7 @@
             </div>
             <div class="carousel-item">
               <div class="carousel-text w-100 h-100 d-flex justify-content-center align-items-center text-white">
-                <h1> Welcome to our service</h1>
+                <h1 class="display-4 pb-5 fw-bold"> So many house care operation without real time review?</h1>
               </div>
               <video class="img-fluid" autoplay loop muted>
                 <source src="./asset/video/s3.mp4" type="video/mp4">
@@ -120,36 +161,46 @@
         <div class="promo2 p-5 mb-5">
           <div class="container clearfix">
             <div class="row row-cols-1 row-cols-md-3 g-4">
+
               <div class="col">
-                <div class="card h-100">
-                  <img src="./asset/img/p1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                      additional content. This content is a little bit longer.</p>
+                <div class="card h-100 border-0">
+                  <img src="./asset/img/p1.jpg" class="card-img-top rounded-3" alt="...">
+                  <div class="card-body ">
+                    <h4 class="card-title">Skilled Professionals</h4>
+                    <h10 style="color:var(--color-prime)"> Your Property in Good Hands.</h10>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, debitis aperiam
+                      doloribus repellendus culpa voluptas excepturi exercitationem neque in velit suscipit minima earum
+                      dolore dolores quia itaque. Nostrum, maxime consectetur?</p>
                   </div>
                 </div>
               </div>
+
               <div class="col">
-                <div class="card h-100">
-                  <img src="./asset/img/p2.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                      additional content. This content is a little bit longer.</p>
+                <div class="card h-100 border-0">
+                  <img src="./asset/img/p1.jpg" class="card-img-top rounded-3" alt="...">
+                  <div class="card-body ">
+                    <h4 class="card-title">Effective Planning</h4>
+                    <h10 style="color:var(--color-prime)"> Construction Process Organized</h10>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, debitis aperiam
+                      doloribus repellendus culpa voluptas excepturi exercitationem neque in velit suscipit minima earum
+                      dolore dolores quia itaque. Nostrum, maxime consectetur?</p>
                   </div>
                 </div>
               </div>
+
               <div class="col">
-                <div class="card h-100">
-                  <img src="./asset/img/p3.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                      additional content.</p>
+                <div class="card h-100 border-0">
+                  <img src="./asset/img/p1.jpg" class="card-img-top rounded-3" alt="...">
+                  <div class="card-body ">
+                    <h4 class="card-title">Risk Management</h4>
+                    <h10 style="color:var(--color-prime)"> We have got you Covered</h10>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, debitis aperiam
+                      doloribus repellendus culpa voluptas excepturi exercitationem neque in velit suscipit minima earum
+                      dolore dolores quia itaque. Nostrum, maxime consectetur?</p>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -157,17 +208,14 @@
         <!-- Customer Parallax---------->
         <div class="promo3 parallax mb-5 w-100 ">
           <div class="container-fluid justify-content-center align-items-center">
-
             <div
-              class=" parallax-text h-100 w-100 d-flex flex-column justify-content-center align-items-center text-center">
+              class=" parallax-text h-100 w-100 p-0 d-flex flex-column justify-content-center align-items-center text-center text-wrap">
               <img src="./asset/avatar/a1.png" alt="" srcset="" style="max-width: 75px ;max-height: 75px">
-              <h2> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, accusantium perferendis quas
-                voluptatem nemo fugiat hic, magnam, facere iusto voluptatibus inventore. Debitis quasi qui iste
-                cupiditate blanditiis vitae accusamus quas!</h2>
+              <h2 class=""> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, accusantium perferendis quas
+                voluptatem nemo fugiat hic, magnam, facere iusto voluptatibus inventore. </h2>
               <h3> - Anh Quan</h3>
               <h5> Mindx Inc.</h5>
             </div>
-
             <div class=" parallax img-fluid "></div>
           </div>
         </div>
@@ -175,10 +223,9 @@
         <!-- Service Feature------------>
         <div class="promo4 mb-5 border-bottom">
           <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4 py-5">
-
-              <div class="col-4 col-md-4 col-sm-12 d-flex flex-row gap-4">
-                <div class="feature-icon col-2">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 g-4 py-5">
+              <div class="col d-flex flex-row gap-4">
+                <div class="feature-icon text-warning col-2">
                   <a><i class="fa-solid fa-money-bill-1-wave fa-4x"></i></a>
                 </div>
                 <div class="feature-text col-10">
@@ -189,8 +236,8 @@
                 </div>
               </div>
 
-              <div class="col-4 col-md-4 col-sm-12 d-flex flex-row gap-4">
-                <div class="feature-icon col-2">
+              <div class="col d-flex flex-row gap-4">
+                <div class="feature-icon text-warning col-2">
                   <a><i class="fa-solid fa-building-columns fa-4x"></i></i></a>
                 </div>
                 <div class="feature-text col-10">
@@ -201,8 +248,8 @@
                 </div>
               </div>
 
-              <div class="col-4 col-md-4 col-sm-12 d-flex flex-row gap-4">
-                <div class="feature-icon col-2">
+              <div class="col d-flex flex-row gap-4">
+                <div class="feature-icon text-warning col-2">
                   <a><i class="fa-solid fa-brush fa-4x"></i></i></a>
                 </div>
                 <div class="feature-text col-10">
@@ -213,8 +260,8 @@
                 </div>
               </div>
 
-              <div class="col-4 col-md-4 col-sm-12 d-flex flex-row gap-4">
-                <div class="feature-icon col-2">
+              <div class="col d-flex flex-row gap-4">
+                <div class="feature-icon text-warning col-2">
                   <a><i class="fa-solid fa-people-group fa-4x"></i></i></a>
                 </div>
                 <div class="feature-text col-10">
@@ -225,8 +272,8 @@
                 </div>
               </div>
 
-              <div class="col-4 col-md-4 col-sm-12 d-flex flex-row gap-4">
-                <div class="feature-icon col-2">
+              <div class="col d-flex flex-row gap-4">
+                <div class="feature-icon text-warning col-2">
                   <a><i class="fa-solid fa-credit-card fa-4x"></i></i></i></a>
                 </div>
                 <div class="feature-text col-10">
@@ -237,8 +284,8 @@
                 </div>
               </div>
 
-              <div class="col-4 col-md-4 col-sm-12 d-flex flex-row gap-4">
-                <div class="feature-icon col-2">
+              <div class="col d-flex flex-row gap-4">
+                <div class="feature-icon text-warning col-2">
                   <a><i class="fa-solid fa-money-bill-1-wave fa-4x"></i></a>
                 </div>
                 <div class="feature-text col-10">
@@ -255,14 +302,14 @@
 
         <!-- Service Selection---------->
         <div class="serviceSelect">
-          <div class="container px-4 py-5" id="home_service">
-            <h1> Our Services</h1>
+          <div class="container-fluid px-4 py-5" id="home_service">
+            <h1 class="display-4 text-center"> Our Services</h1>
             <div class="row row-cols-1 row-cols-lg-4 align-items-stretch g-4 py-5">
 
               <div class="col">
                 <a class="text-decoration-none" href="">
                   <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-                    style="background-image: url('./asset/img/c1.jpg'); background-size: cover;">
+                    style="background-image: url('./asset/img/c1.jpg'); background-size: cover;opacity: 0.8;">
                     <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
                       <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Repair</h2>
                     </div>
@@ -273,9 +320,9 @@
               <div class="col">
                 <a class="text-decoration-none" href="">
                   <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-                    style="background-image: url('./asset/img/c2.jpg'); background-size: cover;">
+                    style="background-image: url('./asset/img/c2.jpg'); background-size: cover;opacity: 0.8">
                     <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
-                      <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Repair</h2>
+                      <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Maintaining</h2>
                     </div>
                   </div>
                 </a>
@@ -284,9 +331,9 @@
               <div class="col">
                 <a class="text-decoration-none" href="">
                   <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-                    style="background-image: url('./asset/img/c3.jpg'); background-size: cover;">
+                    style="background-image: url('./asset/img/c3.jpg'); background-size: cover;opacity: 0.8;">
                     <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
-                      <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Repair</h2>
+                      <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Cleaning</h2>
                     </div>
                   </div>
                 </a>
@@ -295,18 +342,14 @@
               <div class="col">
                 <a class="text-decoration-none" href="">
                   <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-                    style="background-image: url('./asset/img/c1.jpg'); background-size: cover;">
+                    style="background-image: url('./asset/img/c4.jpg'); background-size: cover;opacity: 0.8">
                     <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
-                      <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Repair</h2>
+                      <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Assemble </h2>
                     </div>
                   </div>
                 </a>
               </div>
 
-
-              
-
-              
             </div>
           </div>
         </div>
@@ -316,10 +359,9 @@
 
   <!-- Footer -------------------------------------------------------------------------------------------------------------->
   <section>
-    <footer
-      class="my-md-2 bg-black text-white border-top container-fluid p-5 m-0 justify-content-center align-items-center ">
-      <div class="row">
-        <div class="col-6 col-md-3">
+    <footer class="my-md-2 bg-black text-white border-top container-fluid p-5 m-0 justify-content-center align-items-center ">
+      <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-3">
+        <div class="col">
           <img class="mb-2" src="./asset/logo/2.png" alt="" width="100" height="100">
           <small class="d-block mb-3 text-muted">© 2017–2021</small>
           <h4>Home Care Project</h4>
@@ -332,11 +374,11 @@
               </a></li>
           </ul>
         </div>
-        <div class="col-6 col-md-6">
+        <div class="col">
           <img style="height:300px; width: 100%;" src="./asset/img/map.png">
           </ul>
         </div>
-        <div class="col-6 col-md-3">
+        <div class="col">
           <h3> Follow Us </h3>
           <ul class=" list-group list-unstyled text-small list-group-horizontal gap-2">
             <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
@@ -357,13 +399,7 @@
 
 
 
-  <!-- Main JS---------------------------------------------------------------------------------------------->
-  <script src="./js/main.js"></script>
-  <!-- Extra Libraries--------------------------------------------------------------------------------------->
-  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-  <script defer src="./node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
-  <script defer src="./node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
-  <script defer src="./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
+ 
 </body>
 
 </html>
