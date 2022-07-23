@@ -1,11 +1,15 @@
 window.onscroll = function () { navbarChange() };
 
+
+
+
 function navbarChange() {
     navbar = document.getElementById("navbar");
-    if (document.documentElement.scrollTop > 200) {
+    if (document.documentElement.scrollTop > 200 || screen.width <992) {
         navbar.classList.add("bg-black");
         navbar.classList.remove("bg-transparent");
         document.getElementById("arrowUp").classList.remove("d-none")
+        document.getElementById("")
     } else {
         navbar.classList.remove("bg-dark");
         navbar.classList.add("bg-transparent");

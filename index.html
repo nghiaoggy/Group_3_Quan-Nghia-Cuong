@@ -29,11 +29,16 @@
 
 <body>
   <!-- Arrow Up -->
-  <div id="arrowUp" class="bg-warning d-none m-0 p-0 d-flex justify-content-center align-content-center"><a
+  <div id="arrowUp" class="bg-warning d-none m-0 p-0 d-flex justify-content-center align-items-center"><a
       href="http://" onclick="onTop()"><i class="fa-solid fa-chevron-up fa-lg"></i></i></a> </div>
+
+  <!-- Request Service -->
+  <div id="request" class="bg-warning m-0 p-0 d-flex justify-content-center align-items-center">
+    <a href="http://"><i class="fa-solid fa-cash-register fa-4x"></i></a>
+  </div>
   <!-- Navbar -------------------------------------------------------------------------------------------------------------->
   <section>
-    <header id="navbar" class="p-3 bg-transparent text-white fixed-top border-bottom">
+    <header id="navbar" class="p-3 bg-transparent text-white fixed-top">
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-4">
           <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
@@ -46,12 +51,12 @@
             <li><a href="#" class="nav-link px-2 text-white">Contact</a></li>
           </ul>
 
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 d-flex">
             <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
           </form>
 
           <div class="text-end">
-            <button id="search" type="button" class="btn btn-outline-light me-2 dropdown-toggle">Search</button>
+            <button id="search" type="button" class="btn btn-outline-light me-2">Search</button>
             <button id="login" type="button" class="btn btn-warning" data-bs-toggle="modal"
               data-bs-target="#loginModal">Sign in</button>
             <div id="searchModal" class="dropdown-menu">
@@ -60,14 +65,17 @@
           </div>
 
           <div id="user" class="dropdown text-end d-none">
-            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+              data-bs-toggle="dropdown" aria-expanded="false">
               <img src="./asset/avatar/a1.png" alt="mdo" class="rounded-circle" width="32" height="32">
             </a>
             <ul id="user-setting" class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
               <li><a class="dropdown-item" href="#">New project...</a></li>
               <li><a class="dropdown-item" href="#">Settings</a></li>
               <li><a class="dropdown-item" href="#">Profile</a></li>
-              <li><hr class="dropdown-divider"></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
               <li><a class="dropdown-item" href="#" onclick="signOut()">Sign out</a></li>
             </ul>
           </div>
@@ -122,7 +130,7 @@
 
       <!-- Slider-------------------------------------------------------------------------------------------------->
       <section>
-        <div id="slider" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div id="slider" class="carousel w-100 h-100 slide carousel-fade" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="carousel-text w-100 h-100 d-flex justify-content-center align-items-center text-white">
@@ -167,7 +175,7 @@
       <!-- Body-------------------------------------------------------------------------------------------------->
       <div class="container-fluid">
         <!-- Promo 1-------------------->
-        <div class="promo1 p-5 mb-5">
+        <div class="promo1 p-5 my-5">
           <div class="container clearfix">
             <div class="row align-items-center">
               <div class="col-12 col-lg">
@@ -233,7 +241,7 @@
         <div class="promo3 parallax mb-5 w-100 ">
           <div class="container-fluid justify-content-center align-items-center">
             <div
-              class=" parallax-text h-100 w-100 p-lg-5 p-sm-0 d-flex flex-column justify-content-center align-items-center text-center text-wrap">
+              class=" parallax-text h-100 w-100 px-0 px-sm-0 px-lg-5 d-flex flex-column justify-content-center align-items-center text-center text-wrap">
               <img src="./asset/avatar/a1.png" alt="" srcset="" style="max-width: 75px ;max-height: 75px">
               <h2 class=""> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, accusantium perferendis quas
                 voluptatem nemo fugiat hic, magnam, facere iusto voluptatibus inventore. </h2>
@@ -247,7 +255,7 @@
         <!-- Service Feature------------>
         <div class="promo4 mb-5 border-bottom">
           <div class="container">
-            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 g-4 py-5">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 g-4 p-5 px-sm-3">
               <div class="col d-flex flex-row gap-4">
                 <div class="feature-icon text-warning col-2">
                   <a><i class="fa-solid fa-money-bill-1-wave fa-4x"></i></a>
@@ -326,8 +334,8 @@
 
         <!-- Service Selection---------->
         <div class="serviceSelect">
-          <div class="container-fluid px-4 py-5" id="home_service">
-            <h1 class="display-4 text-center"> Our Services</h1>
+          <div class="container-fluid text-center mb-5 py-5 d-flex flex-column justify-content-center align-items-center border-bottom" id="home_service">
+            <h1 class="display-4 "> Our Services</h1>
             <div class="row row-cols-1 row-cols-lg-4 align-items-stretch g-4 py-5">
 
               <div class="col">
@@ -375,11 +383,29 @@
               </div>
 
             </div>
+            <button class="bg-warning rounded-3 border-0 py-3 px-5 ">View All</button>
           </div>
+        </div>
+
+        <!-- Pass Project -->
+        <div class="promo5 d-flex flex-column text-center my-5 py-5">
+          <h1 class="display-4"> Recently Completed Projects  </h1>
+          <div class="container-fluid row-cols-lg-4 row-cols-sm-1 ">
+            <div class="col position-relative">
+              <img src="./asset/img/pp1.jpeg" alt="" srcset="" class=" img-fluid h-100">
+              <div class="card-hover w-100 h-100 d-none">
+
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </div>
   </section>
+
+
 
   <!-- Footer -------------------------------------------------------------------------------------------------------------->
   <section>
@@ -421,4 +447,5 @@
     </footer>
   </section>
 </body>
+
 </html>
