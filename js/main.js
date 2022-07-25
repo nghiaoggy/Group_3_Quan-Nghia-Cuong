@@ -9,7 +9,7 @@ function navbarChange() {
         navbar.classList.add("bg-black");
         navbar.classList.remove("bg-transparent");
         document.getElementById("arrowUp").classList.remove("d-none")
-        document.getElementById("")
+
     } else {
         navbar.classList.remove("bg-dark");
         navbar.classList.add("bg-transparent");
@@ -62,7 +62,6 @@ function open1(){
 function open2(){
     var x = document.getElementById("Menu")
     x.style.display = 'none';
-
     x = document.getElementById("for_user")
     x.style.display = 'block';
 }
