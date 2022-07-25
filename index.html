@@ -39,53 +39,63 @@
   </div>
   <!-- Navbar -------------------------------------------------------------------------------------------------------------->
   <section>
-    <header id="navbar" class="bg-transparent text-white fixed-top p-sm-2">
-      <div class="container p-0 gap-sm-2">
-        <div id="navbarmain" class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start p-2">
-          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <img src="./asset/logo/4.png" alt="logo" style="width: 40px;height: 40px">
-          </a>
+    <header>
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top" aria-label="Eighth navbar example">
+        <div class="container gap-lg-5 p-lg-2">
+          <a class="navbar-brand" href="#"><img src="./asset/logo/4.png" alt="logo" style="width: 40px;height: 40px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./component/help.html">Help</a>
+              </li>
+             
+            </ul>
 
-          
+            <form>
+              <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            </form>
 
-          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 gap-2 fw-bold">
-            <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">Serivce</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">Contact</a></li>
-            <li><a href="./component/center_sup.html" class="nav-link px-2 text-white">Help</a></li>
-          </ul>
-
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 d-flex">
-            <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-          </form>
-
-          <div class="text-end">
-            <button id="search" type="button" class="btn btn-outline-light me-2">Search</button>
-            <button id="login" type="button" class="btn btn-warning" data-bs-toggle="modal"
-              data-bs-target="#loginModal">Sign in</button>
-            <div id="searchModal" class="dropdown-menu">
-
+            <div class=" mx-0 mx-sm-2 my-2">
+              
+              <button id="search" type="button" class="btn btn-outline-light me-2">Search</button>
+              <button id="login" type="button" class="btn btn-warning" data-bs-toggle="modal"
+                data-bs-target="#loginModal">Sign in</button>
+              <div id="searchModal" class="dropdown-menu">
+  
+              </div>
+            </div>
+  
+            <div id="user" class="dropdown text-end d-none">
+              <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="./asset/avatar/a1.png" alt="mdo" class="rounded-circle" width="32" height="32">
+              </a>
+              <ul id="user-setting" class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#" onclick="signOut()">Sign out</a></li>
+              </ul>
             </div>
           </div>
-
-          <div id="user" class="dropdown text-end d-none">
-            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="./asset/avatar/a1.png" alt="mdo" class="rounded-circle" width="32" height="32">
-            </a>
-            <ul id="user-setting" class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-              <li><a class="dropdown-item" href="#">New project...</a></li>
-              <li><a class="dropdown-item" href="#">Settings</a></li>
-              <li><a class="dropdown-item" href="#">Profile</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#" onclick="signOut()">Sign out</a></li>
-            </ul>
-          </div>
-
         </div>
-      </div>
+      </nav>
     </header>
     <!-- Login Modal-------------------------- -->
     <div id="loginModal" class="modal" role="dialog" aria-hidden="true" tabindex="-1" data-bs-backdrop="static">
@@ -356,7 +366,7 @@
               </div>
 
               <div class="col hvr-float">
-                <a class="text-decoration-none" href="">
+                <a class="text-decoration-none" href="./component/service-reparing.html">
                   <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
                     style="background-image: url('./asset/img/c2.jpg'); background-size: cover;opacity: 0.8">
                     <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
@@ -367,7 +377,7 @@
               </div>
 
               <div class="col hvr-float">
-                <a class="text-decoration-none" href="">
+                <a class="text-decoration-none" href="./component/service-reparing.html">
                   <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
                     style="background-image: url('./asset/img/c3.jpg'); background-size: cover;opacity: 0.8;">
                     <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
@@ -378,7 +388,7 @@
               </div>
 
               <div class="col hvr-float">
-                <a class="text-decoration-none" href="">
+                <a class="text-decoration-none" href="./component/service-reparing.html">
                   <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
                     style="background-image: url('./asset/img/c4.jpg'); background-size: cover;opacity: 0.8">
                     <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
@@ -398,19 +408,19 @@
           <h1 class="display-4 mb-5 mb-lg-5"> Recently Completed Projects </h1>
           <div class="row row-cols-1 row-cols-lg-4 py-1 p-lg-5">
             <div class="col hvr-grow">
-              <img src="./asset/img/pp1.jpeg" alt="" srcset="" class=" img-fluid">
+              <img src="./asset/img/pp1.jpeg" alt="" srcset="" class=" img-fluid h-100">
             </div>
 
             <div class="col hvr-grow">
-              <img src="./asset/img/pp2.jpeg" alt="" srcset="" class=" img-fluid">
+              <img src="./asset/img/pp2.jpeg" alt="" srcset="" class=" img-fluid h-100">
             </div>
 
             <div class="col hvr-grow">
-              <img src="./asset/img/pp3.jpeg" alt="" srcset="" class=" img-fluid">
+              <img src="./asset/img/pp3.jpeg" alt="" srcset="" class=" img-fluid h-100">
             </div>
 
             <div class="col hvr-grow">
-              <img src="./asset/img/pp4.jpeg" alt="" srcset="" class=" img-fluid">
+              <img src="./asset/img/pp4.jpeg" alt="" srcset="" class=" img-fluid h-100">
             </div>
 
           </div>

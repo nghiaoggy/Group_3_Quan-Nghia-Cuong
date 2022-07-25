@@ -34,57 +34,66 @@
             href="http://" onclick="onTop()"><i class="fa-solid fa-chevron-up fa-lg"></i></i></a> </div>
     <!-- Navbar -------------------------------------------------------------------------------------------------------------->
     <section>
-        <header id="navbar" class="p-3 bg-transparent fixed-top text-white">
-            <div class="container">
-                <div
-                    class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-lg-4 gap-sm-0">
-                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                        <img src="../asset/logo/4.png" alt="logo" style="width: 40px;height: 40px">
+        <header>
+            <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top" aria-label="Eighth navbar example">
+              <div class="container gap-lg-5 p-lg-2">
+                <a class="navbar-brand" href="../index.html"><img src="../asset/logo/4.png" alt="logo" style="width: 40px;height: 40px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+          
+                <div class="collapse navbar-collapse" id="navbarMain">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+                    <li class="nav-item">
+                      <a class="nav-link" href="../index.html" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Service</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="../component/help.html" >Help</a>
+                    </li>
+                   
+                  </ul>
+      
+                  <form>
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                  </form>
+      
+                  <div class=" mx-0 mx-sm-2 my-2">
+                    
+                    <button id="search" type="button" class="btn btn-outline-light me-2">Search</button>
+                    <button id="login" type="button" class="btn btn-warning" data-bs-toggle="modal"
+                      data-bs-target="#loginModal">Sign in</button>
+                    <div id="searchModal" class="dropdown-menu">
+        
+                    </div>
+                  </div>
+        
+                  <div id="user" class="dropdown text-end d-none">
+                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="../asset/avatar/a1.png" alt="mdo" class="rounded-circle" width="32" height="32">
                     </a>
-
-                    <ul
-                        class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 gap-lg-2 gap-sm-0 fw-bold">
-                        <li><a href="../index.html" class="nav-link px-2 text-white">Home</a></li>
-                        <li><a href="#" class="nav-link px-2 text-white">Serivce</a></li>
-                        <li><a href="#" class="nav-link px-2 text-white">Contact</a></li>
+                    <ul id="user-setting" class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                      <li><a class="dropdown-item" href="#">New project...</a></li>
+                      <li><a class="dropdown-item" href="#">Settings</a></li>
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="#" onclick="signOut()">Sign out</a></li>
                     </ul>
-
-                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                        <input type="search" class="form-control form-control-dark" placeholder="Search..."
-                            aria-label="Search">
-                    </form>
-
-                    <div class="text-end">
-                        <button id="search" type="button"
-                            class="btn btn-outline-light me-2 dropdown-toggle">Search</button>
-                        <button id="login" type="button" class="btn btn-warning" data-bs-toggle="modal"
-                            data-bs-target="#loginModal">Sign in</button>
-                        <div id="searchModal" class="dropdown-menu">
-
-                        </div>
-                    </div>
-
-                    <div id="user" class="dropdown text-end d-none">
-                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../asset/avatar/a1.png" alt="mdo" class="rounded-circle" width="32" height="32">
-                        </a>
-                        <ul id="user-setting" class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                            <li><a class="dropdown-item" href="#">My Account</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#" onclick="signOut()">Sign out</a></li>
-                        </ul>
-                    </div>
-
+                  </div>
                 </div>
-            </div>
+              </div>
+            </nav>
         </header>
         <!-- Login Modal-------------------------- -->
-        <div id="loginModal" class="modal" role="dialog" aria-hidden="true" tabindex="-1" data-bs-backdrop="static">
+        <div id="loginModal" class="modal fade" role="dialog" aria-hidden="true" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered text-black">
                 <div class="modal-content">
                     <form action="">
@@ -96,13 +105,12 @@
                             <div class="mb-3">
                                 <label for="Username">Username<span class="text-danger">*</span></label>
                                 <input type="text" name="username" class="form-control" id="Username"
-                                    placeholder="Enter Username" required>
+                                    placeholder="Enter Username">
                             </div>
-
                             <div class="mb-3">
                                 <label for="Password">Password<span class="text-danger">*</span></label>
                                 <input type="password" name="password" class="form-control" id="Password"
-                                    placeholder="Enter Password" required>
+                                    placeholder="Enter Password">
                             </div>
                             <div class="mb-3">
                                 <input class="form-check-input" type="checkbox" value="" id="remember" required>
@@ -111,16 +119,14 @@
                             </div>
                         </div>
                         <div class="modal-footer pt-4 ">
-                            <button type="button" id="submit" onclick="validate()" data-bs-dismiss="modal"
-                                class="btn btn-success mx-auto w-100 bg-warning text-black" value="Login">Login</button>
+                            <button type="button"
+                                class="btn btn-success mx-auto w-100 bg-warning text-black">Login</button>
                         </div>
-                        <p class="text-center">Not yet account, <a href="#">Signup</a></p>
+                        <p class="text-center">Not yet account, <a href="register.html">Signup</a></p>
                     </form>
                 </div>
             </div>
         </div>
-
-
     </section>
 
     <!-- Main Body -------------------------------------------------------------------------------------------------------------->
@@ -400,45 +406,42 @@
     <!-- Footer -------------------------------------------------------------------------------------------------------------->
     <section>
         <footer
-            class="my-md-2 bg-black text-white border-top container-fluid p-5 m-0 justify-content-center align-items-center ">
-            <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-3">
-                <div class="col-lg-3">
-                    <img class="mb-2" src="../asset/logo/2.png" alt="" width="100" height="100">
-                    <small class="d-block mb-3 text-muted">© 2017–2021</small>
-                    <h4>Home Care Project</h4>
-                    <ul class="list-unstyled text-small">
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>Adress: </span>
-                                Tầng 6 - Số
-                                22 Thành Công - quận Ba Đình - Hà Nội </a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>Contact: </span>
-                                +84586954854
-                            </a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>License: </span>
-                                3DEC 7.0
-                            </a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <img style="height:300px; width: 100%;" src="../asset/img/map.png">
-                    </ul>
-                </div>
-                <div class="col-lg-3 d-flex flex-column align-items-center">
-                    <h3> Follow Us </h3>
-                    <ul class=" list-group list-unstyled text-small list-group-horizontal gap-2">
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
-                                    class="fa-brands fa-facebook-square fa-2xl"></i></a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
-                                    class="fa-brands fa-instagram-square fa-2xl"></i></a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
-                                    class="fa-brands fa-twitter-square fa-2xl"></i></a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
-                                    class="fa-brands fa-google-plus-square fa-2xl"></i></a></li>
-                    </ul>
-                </div>
-
+          class="my-md-2 bg-black text-white border-top container-fluid p-5 m-0 justify-content-center align-items-center ">
+          <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-3">
+            <div class="col-lg-3">
+              <img class="mb-2" src="./asset/logo/2.png" alt="" width="100" height="100">
+              <small class="d-block mb-3 text-muted">© 2017–2021</small>
+              <h4>Home Care Project</h4>
+              <ul class="list-unstyled text-small">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>Adress: </span> Tầng 6 - Số
+                    22 Thành Công - quận Ba Đình - Hà Nội </a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>Contact: </span> +84586954854
+                  </a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>License: </span> 3DEC 7.0
+                  </a></li>
+              </ul>
             </div>
+            <div class="col-lg-6">
+              <img style="height:300px; width: 100%;" src="./asset/img/map.png">
+              </ul>
+            </div>
+            <div class="col-lg-3 d-flex flex-column align-items-center">
+              <h3> Follow Us </h3>
+              <ul class=" list-group list-unstyled text-small list-group-horizontal gap-2">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                      class="fa-brands fa-facebook-square fa-2xl"></i></a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                      class="fa-brands fa-instagram-square fa-2xl"></i></a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                      class="fa-brands fa-twitter-square fa-2xl"></i></a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                      class="fa-brands fa-google-plus-square fa-2xl"></i></a></li>
+              </ul>
+            </div>
+    
+          </div>
         </footer>
-    </section>
+      </section>
 </body>
 
 </html>
