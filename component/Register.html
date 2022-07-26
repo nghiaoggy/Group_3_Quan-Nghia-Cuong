@@ -6,17 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Page</title>
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="../css/Register.css">
     <!--Database---------------------------------------------------------------------------------------------->
     <script src="../js/userData.js"></script>
-    <!-- Main JS---------------------------------------------------------------------------------------------->
-    <script src="../js/main.js"></script>
 
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src="../component/Register.html"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script defer src="../node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
     <script defer src="../node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
@@ -25,104 +22,64 @@
 </head>
 <body>
    <!-- Navbar -------------------------------------------------------------------------------------------------------------->
-  <section>
-    <header>
-      <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
-        <div class="container gap-lg-5 p-lg-2">
-          <a class="navbar-brand" href="#"><img src="./asset/logo/4.png" alt="logo" style="width: 40px;height: 40px"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-    
-          <div class="collapse navbar-collapse" id="navbarMain">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Service</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./component/help.html">Help</a>
-              </li>
-             
-            </ul>
-
-            <form>
-              <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-            </form>
-
-            <div class=" mx-0 mx-sm-2 my-2">
-              
-              <button id="search" type="button" class="btn btn-outline-light me-2">Search</button>
-              <button id="login" type="button" class="btn btn-warning" data-bs-toggle="modal"
-                data-bs-target="#loginModal">Sign in</button>
-              <div id="searchModal" class="dropdown-menu">
-  
-              </div>
-            </div>
-  
-            <div id="user" class="dropdown text-end d-none">
-              <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="./asset/avatar/a1.png" alt="mdo" class="rounded-circle" width="32" height="32">
-              </a>
-              <ul id="user-setting" class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                <li><a class="dropdown-item" href="#">New project...</a></li>
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#" onclick="signOut()">Sign out</a></li>
+   <section>
+    <header class="p-3 bg-black text-white sticky-top">
+      <div class="container" style="padding-left: 0 !important;">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-0">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <img src="../asset/logo/4.png" alt="logo" style="width: 40px;height: 40px">
+            </a>
+            
+              <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" style="margin-left: 3% !important;">
+                <li><a href="../index.html" class="nav-link px-2 text-white">Home</a></li>
+                <li><a href="#" class="nav-link px-2 text-secondary">Service</a></li>
+                <li><a href="#" class="nav-link px-2 text-secondary">Contact</a></li>
+                <li><a href="./help.html" class="nav-link px-2 text-secondary">Help</a></li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- Login Modal-------------------------- -->
-    <div id="loginModal" class="modal" role="dialog" aria-hidden="true" tabindex="-1" data-bs-backdrop="static">
-      <div class="modal-dialog modal-dialog-centered text-black">
-        <div class="modal-content">
-          <form action="">
-            <div class="modal-header">
-              <h5 class="modal-title">Modal Login Form</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <div class="mb-3">
-                <label for="Username">Username<span class="text-danger">*</span></label>
-                <input type="text" name="username" class="form-control" id="Username" placeholder="Enter Username"
-                  required>
+              <form>
+                <input type="search" class="form-control form-control-dark" placeholder="Search" aria-label="Search">
+              </form>
+              <div class=" mx-0 mx-sm-2 my-2">
+                <button id="search" type="button" class="btn btn-outline-light me-2">Search</button>
+                <button id="login" type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#loginModal">Sign in</button>
               </div>
-
-              <div class="mb-3">
-                <label for="Password">Password<span class="text-danger">*</span></label>
-                <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password"
-                  required>
-              </div>
-              <div class="mb-3">
-                <input class="form-check-input" type="checkbox" value="" id="remember" required>
-                <label class="form-check-label" for="remember">Remember Me</label>
-                <a href="#" class="float-end">Forgot Password</a>
-              </div>
-            </div>
-            <div class="modal-footer pt-4 ">
-              <button type="button" id="submit" onclick="validate()" data-bs-dismiss="modal"
-                class="btn btn-success mx-auto w-100 bg-warning text-black" value="Login">Login</button>
-            </div>
-            <p class="text-center">Not yet account, <a href="./component/Register.html">Signup</a></p>
-          </form>
+            
         </div>
       </div>
+    </header>
+    <!-- Login Modal-------------------------- -->
+    <div id="loginModal" class="modal fade" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered text-black">
+            <div class="modal-content">
+                <form action="">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal Login Form</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="Username">Username<span class="text-danger">*</span></label>
+                        <input type="text" name="username" class="form-control" id="Username" placeholder="Enter Username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Password">Password<span class="text-danger">*</span></label>
+                            <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password">
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-check-input" type="checkbox" value="" id="remember" required>
+                            <label class="form-check-label" for="remember">Remember Me</label>
+                            <a href="#" class="float-end">Forgot Password</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer pt-4 ">
+                        <button type="button" class="btn btn-success mx-auto w-100 bg-warning text-black">Login</button>
+                    </div>
+                    <p class="text-center">Not yet account, <a href="#">Signup</a></p>
+                </form>
+            </div>
+        </div>
     </div>
-
-
-  </section>
+    </section>
 
     <section>
     <div class="intropos p-sm-1 p-lg-5 my-sm-1 my-lg-5">
@@ -137,16 +94,16 @@
         <form class="formdec" id="for_partner">
             <h1 style="text-align: center;">Register for partner</h1>
             <div class="form-outline mb-2">
-                <input class="form-control" id="fullname" type="text" placeholder="Your Full Name">
+                <input class="form-control" id="fullnamepartner" type="text" placeholder="Your Full Name">
             </div>
             <div class="mb-1 mt-3">
-                <input class="form-control" id="Idnum" type="text" placeholder="Your ID Number">
+                <input class="form-control" id="Idnumpartner" type="text" placeholder="Your ID Number">
             </div>
             <div class="mb-1 mt-3">
-                <input class="form-control" id="Phone" type="text" placeholder="Your Phone Number">
+                <input class="form-control" id="Phonepartner" type="text" placeholder="Your Phone Number">
             </div>
             <div class="mb-1 mt-4">
-                <input class="form-control" id="Address" type="text" placeholder="Your Address">
+                <input class="form-control" id="Addresspartner" type="text" placeholder="Your Address">
             </div>
 
             <select class="form-select mb-1 mt-3" aria-label=".form-select-lg example">
@@ -166,16 +123,16 @@
             <p id = "demo"></p>
 
             <div>
-                <input class="form-control mb-1 mt-3" id="disabledEmail" type="text" placeholder="Your Email">
-                <input class="form-control mb-1 mt-3" id="disabledPass" type="password" placeholder="Your Password">
+                <input class="form-control mb-1 mt-3" id="Emailpartner" type="text" placeholder="Your Email">
+                <input class="form-control mb-1 mt-3" id="Passpartner" type="password" placeholder="Your Password">
                 <div id="passwordHelpBlock" class="form-text" style="margin-left: 1%; padding-bottom: 2%;">
                     Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
                 </div>
-                <input class="form-control" id="disabledInput" type="password" placeholder="Repeat your Password">
+                <input class="form-control" id="Inputpartner" type="password" placeholder="Repeat your Password">
             </div>
             <div class="form-check mb-3 mt-3">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">By clicking this button, you agree to our <a href="" style="color: rgba(82, 226, 25, 0.9);">Term of Services</a></label>
+                <input type="checkbox" class="form-check-input" id="Checkpartner">
+                <label class="form-check-label" for="Checkpartner">By clicking this button, you agree to our <a href="" style="color: rgba(82, 226, 25, 0.9);">Term of Services</a></label>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <button type="submit" class="btn btn-warning me-md-2">Resgister</button>
@@ -186,28 +143,28 @@
         <form class="formdec" id="for_user">
             <h1 style="text-align: center;">Register for user</h1>
             <div class="form-outline mb-2">
-                <input class="form-control" id="fullname" type="text" placeholder="Your Full Name">
+                <input class="form-control" id="fullnameuser" type="text" placeholder="Your Full Name">
             </div>
             <div class="mb-1 mt-3">
-                <input class="form-control" id="Idnum" type="text" placeholder="Your ID Number">
+                <input class="form-control" id="Idnumuser" type="text" placeholder="Your ID Number">
             </div>
             <div class="mb-1 mt-3">
-                <input class="form-control" id="Phone" type="text" placeholder="Your Phone Number">
+                <input class="form-control" id="Phoneuser" type="text" placeholder="Your Phone Number">
             </div>
             <div class="mb-1 mt-3">
-                <input class="form-control" id="Address" type="text" placeholder="Your Address">
+                <input class="form-control" id="Addressuser" type="text" placeholder="Your Address">
             </div>
             <div class="mb-1 mt-3">
-                <input class="form-control" id="disabledEmail" type="text" placeholder="Your Email">
-                <input class="form-control mb-1 mt-3" id="disabledPass" type="password" placeholder="Your Password">
+                <input class="form-control" id="Emailuser" type="text" placeholder="Your Email">
+                <input class="form-control mb-1 mt-3" id="Passuser" type="password" placeholder="Your Password">
                 <div id="passwordHelpBlock" class="form-text" style="color: white; margin-left: 1%;">
                     Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
                 </div>
-                <input class="form-control" id="disabledInput" type="password" placeholder="Repeat your Password">
+                <input class="form-control" id="Inputuser" type="password" placeholder="Repeat your Password">
             </div>
             <div class="form-check mb-3 mt-3">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">By clicking this button, you agree to our <a href="" style="color: rgba(82, 226, 25, 0.9);">Term of Services</a></label>
+                <input type="checkbox" class="form-check-input" id="Checkuser">
+                <label class="form-check-label" for="Checkuser">By clicking this button, you agree to our <a href="" style="color: rgba(82, 226, 25, 0.9);">Term of Services</a></label>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <button type="submit" class="btn btn-warning me-md-2">Register</button>
@@ -223,7 +180,7 @@
         class="my-md-2 bg-black text-white border-top container-fluid p-5 m-0 justify-content-center align-items-center ">
         <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-3">
           <div class="col-lg-3">
-            <img class="mb-2" src="./asset/logo/2.png" alt="" width="100" height="100">
+            <img class="mb-2" src="../asset/logo/2.png" alt="" width="100" height="100">
             <small class="d-block mb-3 text-muted">© 2017–2021</small>
             <h4>Home Care Project</h4>
             <ul class="list-unstyled text-small">
@@ -236,7 +193,7 @@
             </ul>
           </div>
           <div class="col-lg-6">
-            <img style="height:300px; width: 100%;" src="./asset/img/map.png">
+            <img style="height:300px; width: 100%;" src="../asset/img/map.png">
             </ul>
           </div>
           <div class="col-lg-3 d-flex flex-column align-items-center">
@@ -255,6 +212,7 @@
   
         </div>
       </footer>
-    </section>
+  </section>
+    <script src="../js/register.js"></script>
 </body>
 </html>

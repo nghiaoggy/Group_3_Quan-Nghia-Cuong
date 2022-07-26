@@ -157,3 +157,54 @@ body{
     .supportmenu {display: none;}
     .mybtn {display: flex;}
 }
+:root {
+    --color-prime: #ffca2c;
+    --color-secondary: rgb(0, 0, 0);
+    --color-gray: #f5f5f5;
+    --color-text: rgb(255,255,255);
+
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+a,
+dl,
+dt,
+dd,
+ol,
+ul,
+li {
+    margin: 0 !important;
+    padding: 0 !important;
+
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+}
+
+body{
+    color: var(--color-secondary);
+    line-height: 1.5;
+    overflow: hidden;
+    overflow-y: scroll;
+    font-family: Lato,sans-serif;
+}
+footer{
+    width: 100%;
+    margin: 0 !important;
+    display: flex !important;
+    box-sizing: border-box !important;
+
+}

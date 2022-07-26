@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Support Centre</title>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="../asset/logo/3.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Register Page</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/center_sup.css">
-    <link rel="stylesheet" href="../node_modules/hover.css/css/hover.css">
-
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script defer src="../node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
@@ -22,66 +16,29 @@
     <script defer src="../node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-
 <body>
     <section>
-        <header>
-            <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top" aria-label="Eighth navbar example">
-              <div class="container gap-lg-5 p-lg-2">
-                <a class="navbar-brand" href="../index.html"><img src="../asset/logo/4.png" alt="logo" style="width: 40px;height: 40px"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-          
-                <div class="collapse navbar-collapse" id="navbarMain">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
-                    <li class="nav-item">
-                      <a class="nav-link" href="../index.html" >Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Service</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Contact</a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link active" href="../component/help.html" aria-current="page">Help</a>
-                    </li>
-                   
-                  </ul>
-      
-                  <form>
-                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                  </form>
-      
-                  <div class=" mx-0 mx-sm-2 my-2">
-                    
-                    <button id="search" type="button" class="btn btn-outline-light me-2">Search</button>
-                    <button id="login" type="button" class="btn btn-warning" data-bs-toggle="modal"
-                      data-bs-target="#loginModal">Sign in</button>
-                    <div id="searchModal" class="dropdown-menu">
-        
+        <header class="d-flex p-3 bg-black text-white sticky-top" style="justify-content: space-between;">
+            <div class="container gap-lg-5 p-lg-2">
+                <div class="d-flex flex-wrap align-items-center justify-content-lg-start gap-4">
+                    <div style="display: flex; margin-left: 5%;">
+                        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                            <img src="../asset/logo/4.png" alt="logo" style="width: 40px;height: 40px">
+                        </a>
+                        <span class="p-2 mb-2 justify-content-center mb-md-0 gap-2 fw-bold">
+                            Support Centre
+                        </span>
                     </div>
-                  </div>
-        
-                  <div id="user" class="dropdown text-end d-none">
-                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                      <img src="../asset/avatar/a1.png" alt="mdo" class="rounded-circle" width="32" height="32">
-                    </a>
-                    <ul id="user-setting" class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                      <li><a class="dropdown-item" href="#">New project...</a></li>
-                      <li><a class="dropdown-item" href="#">Settings</a></li>
-                      <li><a class="dropdown-item" href="#">Profile</a></li>
-                      <li>
-                        <hr class="dropdown-divider">
-                      </li>
-                      <li><a class="dropdown-item" href="#" onclick="signOut()">Sign out</a></li>
-                    </ul>
-                  </div>
                 </div>
-              </div>
-            </nav>
+            </div>
+            <div class="iconpos">
+                <button id="login" type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#loginModal" style="position: relative; box-sizing: border-box;">Sign in</button>
+                <div class="mybtn">
+                    <button type="button" class="btn btn-warning" onclick="open1()">
+                        <i class="fa-solid fa-angles-down"></i>
+                    </button>
+                </div>
+            </div>
         </header>
         <!-- Login Modal-------------------------- -->
         <div id="loginModal" class="modal fade" role="dialog" aria-hidden="true" tabindex="-1">
@@ -95,13 +52,11 @@
                         <div class="modal-body">
                             <div class="mb-3">
                                 <label for="Username">Username<span class="text-danger">*</span></label>
-                                <input type="text" name="username" class="form-control" id="Username"
-                                    placeholder="Enter Username">
+                            <input type="text" name="username" class="form-control" id="Username" placeholder="Enter Username">
                             </div>
                             <div class="mb-3">
                                 <label for="Password">Password<span class="text-danger">*</span></label>
-                                <input type="password" name="password" class="form-control" id="Password"
-                                    placeholder="Enter Password">
+                                <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password">
                             </div>
                             <div class="mb-3">
                                 <input class="form-check-input" type="checkbox" value="" id="remember" required>
@@ -110,147 +65,127 @@
                             </div>
                         </div>
                         <div class="modal-footer pt-4 ">
-                            <button type="button"
-                                class="btn btn-success mx-auto w-100 bg-warning text-black">Login</button>
+                            <button type="button" class="btn btn-success mx-auto w-100 bg-warning text-black">Login</button>
                         </div>
-                        <p class="text-center">Not yet account, <a href="register.html">Signup</a></p>
+                        <p class="text-center">Not yet account, <a href="#">Signup</a></p>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-
-    <section>
-         <!-- Cover-------------------------------------------------------------------------------------------------->
-         <section>
-            <div class="cover position-relative overflow-hidden text-center bg-dark text-light p-5">
-                <div class="col-md-5 p-lg-5 mx-auto my-5">
-                    <h1 class="display-4 fw-normal">Customer Support Service</h1>
-                    <p class="lead fw-normal">Quality repairs on all kinds of items.</p>
-                </div>
-                <div class="product-device shadow-sm d-none d-md-block"></div>
-                <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-            </div>
-        </section>
-        
-        <div class="mybody" id="largescr">
-            <div class="supportmenu" role="list">
-                <div class="menusort">
-                    <div class="menulist">
-                        <div class="menulistpos" role="list">
-                            <div role="listitem" class="menuitem">One</div>
-                            <div role="listitem" class="menuitem">Two</div>
-                            <div role="listitem" class="menuitem">Three</div>
-                            <div role="listitem" class="menuitem">Four</div>
-                            <div role="listitem" class="menuitem">Five</div>
-                        </div>
+    <div class="mybody" id="largescr">
+        <div class="supportmenu" role="list">
+            <div class="menusort">
+                <div class="menulist">
+                    <div class="menulistpos" role="list">
+                        <div role="listitem" class="menuitem">One</div>
+                        <div role="listitem" class="menuitem">Two</div>
+                        <div role="listitem" class="menuitem">Three</div>
+                        <div role="listitem" class="menuitem">Four</div>
+                        <div role="listitem" class="menuitem">Five</div>
                     </div>
                 </div>
             </div>
-            <div class="helpother">
-                <div class="helpmain">
-                    <div class="helpalign">
-                        <div class="helpsort">
-                            <div class="supportbanner">
-                                <span class="supporttext">
-                                    How can we help you?
-                                </span>
-                                <div class="mb-3"
-                                    style="display: flex; flex-direction: row; width: 100%; padding-top: 10px;">
-                                    <button id="search-button" type="button" class="btn btn-warning btn-lg"
-                                        style="border-bottom-right-radius: 0px; border-top-right-radius: 0px;">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                                    <input class="form-control" id="formFileLg" type="search"
-                                        style="border-bottom-left-radius: 0px; border-top-left-radius: 0px;"
-                                        placeholder="Search for help article...">
-                                </div>
+        </div>
+        <div class="helpother">
+            <div class="helpmain">
+                <div class="helpalign">
+                    <div class="helpsort">
+                        <div class="supportbanner">
+                            <span class="supporttext">
+                                How can we help you?
+                            </span>
+                            <div class="mb-3" style="display: flex; flex-direction: row; width: 100%; padding-top: 10px;">
+                                <button id="search-button" type="button" class="btn btn-warning btn-lg" style="border-bottom-right-radius: 0px; border-top-right-radius: 0px;">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                                <input class="form-control" id="formFileLg" type="search" style="border-bottom-left-radius: 0px; border-top-left-radius: 0px;" placeholder="Search for help article...">
                             </div>
-                            <div class="topic">
-                                <div class="topicbanner">
-                                    <span class="topictext">Popular topics</span>
-                                </div>
-                                <div>
-                                    <div class="boxalign" role="listbox">
+                        </div>
+                        <div class="topic">
+                            <div class="topicbanner">
+                                <span class="topictext">Popular topics</span>
+                            </div>
+                            <div>
+                                <div class="boxalign" role="listbox">
                                         <div class="boxpos">
                                             <div class="boxinfo">
-                                                <div class="boxsort">
-                                                    <a class="boxitem1">
-                                                        <img src="../asset/logo/4.png" height="100" width="100">
-                                                    </a>
-                                                    <div class="boxitem2">
-                                                        <span class="topicname">Account Settings</span>
-                                                        <p class="topicinfo">Lorem ipsum dolor.</p>
-                                                    </div>
+                                            <div class="boxsort">
+                                                <a class="boxitem1">
+                                                    <img src="../asset/logo/4.png" height="100" width="100">
+                                                </a>
+                                                <div class="boxitem2">
+                                                    <span class="topicname">Account Settings</span>
+                                                    <p class="topicinfo">Lorem ipsum dolor.</p>
                                                 </div>
+                                            </div> 
                                             </div>
                                         </div>
                                         <div class="boxpos">
                                             <div class="boxinfo">
-                                                <div class="boxsort">
-                                                    <a class="boxitem1">
-                                                        <img src="../asset/logo/4.png" height="100" width="100">
-                                                    </a>
-                                                    <div class="boxitem2">
-                                                        <span class="topicname">Account Settings</span>
-                                                        <p class="topicinfo">Lorem ipsum dolor.</p>
-                                                    </div>
+                                            <div class="boxsort">
+                                                <a class="boxitem1">
+                                                    <img src="../asset/logo/4.png" height="100" width="100">
+                                                </a>
+                                                <div class="boxitem2">
+                                                    <span class="topicname">Account Settings</span>
+                                                    <p class="topicinfo">Lorem ipsum dolor.</p>
                                                 </div>
+                                            </div> 
                                             </div>
                                         </div>
                                         <div class="boxpos">
                                             <div class="boxinfo">
-                                                <div class="boxsort">
-                                                    <a class="boxitem1">
-                                                        <img src="../asset/logo/4.png" height="100" width="100">
-                                                    </a>
-                                                    <div class="boxitem2">
-                                                        <span class="topicname">Account Settings</span>
-                                                        <p class="topicinfo">Lorem ipsum dolor.</p>
-                                                    </div>
+                                            <div class="boxsort">
+                                                <a class="boxitem1">
+                                                    <img src="../asset/logo/4.png" height="100" width="100">
+                                                </a>
+                                                <div class="boxitem2">
+                                                    <span class="topicname">Account Settings</span>
+                                                    <p class="topicinfo">Lorem ipsum dolor.</p>
                                                 </div>
+                                            </div> 
                                             </div>
                                         </div>
                                         <div class="boxpos">
                                             <div class="boxinfo">
-                                                <div class="boxsort">
-                                                    <a class="boxitem1">
-                                                        <img src="../asset/logo/4.png" height="100" width="100">
-                                                    </a>
-                                                    <div class="boxitem2">
-                                                        <span class="topicname">Account Settings</span>
-                                                        <p class="topicinfo">Lorem ipsum dolor.</p>
-                                                    </div>
+                                            <div class="boxsort">
+                                                <a class="boxitem1">
+                                                    <img src="../asset/logo/4.png" height="100" width="100">
+                                                </a>
+                                                <div class="boxitem2">
+                                                    <span class="topicname">Account Settings</span>
+                                                    <p class="topicinfo">Lorem ipsum dolor.</p>
                                                 </div>
+                                            </div> 
                                             </div>
                                         </div>
                                         <div class="boxpos">
                                             <div class="boxinfo">
-                                                <div class="boxsort">
-                                                    <a class="boxitem1">
-                                                        <img src="../asset/logo/4.png" height="100" width="100">
-                                                    </a>
-                                                    <div class="boxitem2">
-                                                        <span class="topicname">Account Settings</span>
-                                                        <p class="topicinfo">Lorem ipsum dolor.</p>
-                                                    </div>
+                                            <div class="boxsort">
+                                                <a class="boxitem1">
+                                                    <img src="../asset/logo/4.png" height="100" width="100">
+                                                </a>
+                                                <div class="boxitem2">
+                                                    <span class="topicname">Account Settings</span>
+                                                    <p class="topicinfo">Lorem ipsum dolor.</p>
                                                 </div>
+                                            </div> 
                                             </div>
                                         </div>
                                         <div class="boxpos">
                                             <div class="boxinfo">
-                                                <div class="boxsort">
-                                                    <a class="boxitem1">
-                                                        <img src="../asset/logo/4.png" height="100" width="100">
-                                                    </a>
-                                                    <div class="boxitem2">
-                                                        <span class="topicname">Account Settings</span>
-                                                        <p class="topicinfo">Lorem ipsum dolor.</p>
-                                                    </div>
+                                            <div class="boxsort">
+                                                <a class="boxitem1">
+                                                    <img src="../asset/logo/4.png" height="100" width="100">
+                                                </a>
+                                                <div class="boxitem2">
+                                                    <span class="topicname">Account Settings</span>
+                                                    <p class="topicinfo">Lorem ipsum dolor.</p>
                                                 </div>
+                                            </div> 
                                             </div>
                                         </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -258,50 +193,45 @@
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
     <section>
         <footer
-            class="my-md-2 bg-black text-white border-top container-fluid p-5 m-0 justify-content-center align-items-center ">
-            <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-3">
-                <div class="col-lg-3">
-                    <img class="mb-2" src="../asset/logo/2.png" alt="" width="100" height="100">
-                    <small class="d-block mb-3 text-muted">© 2017–2021</small>
-                    <h4>Home Care Project</h4>
-                    <ul class="list-unstyled text-small">
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>Adress: </span>
-                                Tầng 6 - Số
-                                22 Thành Công - quận Ba Đình - Hà Nội </a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>Contact: </span>
-                                +84586954854
-                            </a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>License: </span>
-                                3DEC 7.0
-                            </a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <img style="height:300px; width: 100%;" src="../asset/img/map.png">
-                    </ul>
-                </div>
-                <div class="col-lg-3 d-flex flex-column align-items-center">
-                    <h3> Follow Us </h3>
-                    <ul class=" list-group list-unstyled text-small list-group-horizontal gap-2">
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
-                                    class="fa-brands fa-facebook-square fa-2xl"></i></a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
-                                    class="fa-brands fa-instagram-square fa-2xl"></i></a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
-                                    class="fa-brands fa-twitter-square fa-2xl"></i></a></li>
-                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
-                                    class="fa-brands fa-google-plus-square fa-2xl"></i></a></li>
-                    </ul>
-                </div>
-
+          class="my-md-2 bg-black text-white border-top container-fluid p-5 m-0 justify-content-center align-items-center ">
+          <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-3">
+            <div class="col-lg-3">
+              <img class="mb-2" src="../asset/logo/2.png" alt="" width="100" height="100">
+              <small class="d-block mb-3 text-muted">© 2017–2021</small>
+              <h4>Home Care Project</h4>
+              <ul class="list-unstyled text-small">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>Adress: </span> Tầng 6 - Số
+                    22 Thành Công - quận Ba Đình - Hà Nội </a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>Contact: </span> +84586954854
+                  </a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>License: </span> 3DEC 7.0
+                  </a></li>
+              </ul>
             </div>
+            <div class="col-lg-6">
+              <img style="height:300px; width: 100%;" src="../asset/img/map.png">
+              </ul>
+            </div>
+            <div class="col-lg-3 d-flex flex-column align-items-center">
+              <h3> Follow Us </h3>
+              <ul class=" list-group list-unstyled text-small list-group-horizontal gap-2">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                      class="fa-brands fa-facebook-square fa-2xl"></i></a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                      class="fa-brands fa-instagram-square fa-2xl"></i></a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                      class="fa-brands fa-twitter-square fa-2xl"></i></a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                      class="fa-brands fa-google-plus-square fa-2xl"></i></a></li>
+              </ul>
+            </div>
+    
+          </div>
         </footer>
     </section>
-    <script src="./center_sup.js"></script>
+    <script src="../js/center_sup.js"></script>
 </body>
-
 </html>
