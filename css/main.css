@@ -62,8 +62,8 @@ a {
 body{
     color: var(--color-secondary);
     line-height: 1.5;
-    overflow: hidden;
-    overflow-y: scroll;
+    overflow: hidden !important;
+    overflow-y: scroll !important ;
     font-family: Lato,sans-serif;
 }
 
@@ -194,6 +194,33 @@ body{
     display: block !important;
     position: absolute !important;
     z-index: 999;
+}
+
+.contact{
+    position: absolute;
+    width: 600px !important;
+    height: 500px;
+    z-index: 999;
+    background-color: var(--color-text);
+    margin-left: 15% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-sizing: border-box !important;
+}
+
+.contact h1{ color: var(--color-prime);}
+.contact a{
+    border-radius: 5px;
+    border: 1px solid var(--color-prime);
+}
+.contact a:hover{
+    background-color: var(--color-text);
+}
+.gm-container{
+    height: 500px !important;
+    box-sizing: border-box;
 }
 
 /* ----------------------------------------------------------

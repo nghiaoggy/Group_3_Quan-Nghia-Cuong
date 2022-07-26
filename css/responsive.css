@@ -16,4 +16,12 @@
     }
     .supportmenu {display: none;}
     .mybtn {display: flex;}
+
+    .serviceSelect .row{
+        width: 100% !important;
+    }
+
+    .contact{
+        position: relative !important;
+    }
 }
