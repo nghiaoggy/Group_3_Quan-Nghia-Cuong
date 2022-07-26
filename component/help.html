@@ -12,20 +12,19 @@
     <script defer src="../node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
     <script defer src="../node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
     <script defer src="../node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <section>
         <header class="d-flex p-3 bg-black text-white sticky-top" style="justify-content: space-between;">
             <div class="container gap-lg-5 p-lg-2">
-                <div class="d-flex flex-wrap align-items-center justify-content-lg-start gap-4">
+                <div class="d-flex flex-wrap align-items-center justify-content-lg-start gap-5">
                     <div style="display: flex; margin-left: 5%;">
                         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                             <img src="../asset/logo/4.png" alt="logo" style="width: 40px;height: 40px">
                         </a>
-                        <span class="p-2 mb-2 justify-content-center mb-md-0 gap-2 fw-bold">
-                            Support Centre
-                        </span>
                     </div>
+                    <span class="headtext">Support Centre</span>
                 </div>
             </div>
             <div class="iconpos">
@@ -74,13 +73,13 @@
         <div class="supportmenu" role="list">
             <div class="menusort">
                 <div class="menulist">
-                    <div class="menulistpos" role="list">
-                        <div role="listitem" class="menuitem">One</div>
-                        <div role="listitem" class="menuitem">Two</div>
-                        <div role="listitem" class="menuitem">Three</div>
-                        <div role="listitem" class="menuitem">Four</div>
-                        <div role="listitem" class="menuitem">Five</div>
-                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -92,98 +91,99 @@
                             <span class="supporttext">
                                 How can we help you?
                             </span>
-                            <div class="mb-3" style="display: flex; flex-direction: row; width: 100%; padding-top: 10px;">
-                                <button id="search-button" type="button" class="btn btn-warning btn-lg" style="border-bottom-right-radius: 0px; border-top-right-radius: 0px;">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                                <input class="form-control" id="formFileLg" type="search" style="border-bottom-left-radius: 0px; border-top-left-radius: 0px;" placeholder="Search for help article...">
+                            <div class="wrapper">
+                                <div class="search-input">
+                                    <a href="" target="_blank" hidden></a>
+                                    <input class="form-control" id="formFileLg" type="search" style="border-bottom-left-radius: 0px; border-top-left-radius: 0px;" placeholder="Search for help article...">
+                                    <div class="autocom-box">
+                                    </div>
+                                    <div class="icon"><i class="fa fa-search"></i></div>
+                                </div>
                             </div>
                         </div>
                         <div class="topic">
                             <div class="topicbanner">
                                 <span class="topictext">Popular topics</span>
                             </div>
-                            <div>
-                                <div class="boxalign" role="listbox">
-                                        <div class="boxpos">
-                                            <div class="boxinfo">
-                                            <div class="boxsort">
-                                                <a class="boxitem1">
-                                                    <img src="../asset/logo/4.png" height="100" width="100">
-                                                </a>
-                                                <div class="boxitem2">
-                                                    <span class="topicname">Account Settings</span>
-                                                    <p class="topicinfo">Lorem ipsum dolor.</p>
-                                                </div>
-                                            </div> 
+                            <div class="boxalign">
+                                <div class="boxpos">
+                                    <div class="boxinfo">
+                                        <div class="boxsort">
+                                            <a class="boxitem1">
+                                                <img src="../asset/logo/4.png" height="100" width="100">
+                                            </a>
+                                            <div class="boxitem2">
+                                                <span class="topicname">Account Settings</span>
+                                                <p class="topicinfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aliquid in praesentium molestiae pariatur officiis adipisci ut architecto consequuntur expedita similique ad, perspiciatis quo esse mollitia. Aliquid consequuntur molestias delectus.</p>
                                             </div>
-                                        </div>
-                                        <div class="boxpos">
-                                            <div class="boxinfo">
-                                            <div class="boxsort">
-                                                <a class="boxitem1">
-                                                    <img src="../asset/logo/4.png" height="100" width="100">
-                                                </a>
-                                                <div class="boxitem2">
-                                                    <span class="topicname">Account Settings</span>
-                                                    <p class="topicinfo">Lorem ipsum dolor.</p>
-                                                </div>
-                                            </div> 
-                                            </div>
-                                        </div>
-                                        <div class="boxpos">
-                                            <div class="boxinfo">
-                                            <div class="boxsort">
-                                                <a class="boxitem1">
-                                                    <img src="../asset/logo/4.png" height="100" width="100">
-                                                </a>
-                                                <div class="boxitem2">
-                                                    <span class="topicname">Account Settings</span>
-                                                    <p class="topicinfo">Lorem ipsum dolor.</p>
-                                                </div>
-                                            </div> 
-                                            </div>
-                                        </div>
-                                        <div class="boxpos">
-                                            <div class="boxinfo">
-                                            <div class="boxsort">
-                                                <a class="boxitem1">
-                                                    <img src="../asset/logo/4.png" height="100" width="100">
-                                                </a>
-                                                <div class="boxitem2">
-                                                    <span class="topicname">Account Settings</span>
-                                                    <p class="topicinfo">Lorem ipsum dolor.</p>
-                                                </div>
-                                            </div> 
-                                            </div>
-                                        </div>
-                                        <div class="boxpos">
-                                            <div class="boxinfo">
-                                            <div class="boxsort">
-                                                <a class="boxitem1">
-                                                    <img src="../asset/logo/4.png" height="100" width="100">
-                                                </a>
-                                                <div class="boxitem2">
-                                                    <span class="topicname">Account Settings</span>
-                                                    <p class="topicinfo">Lorem ipsum dolor.</p>
-                                                </div>
-                                            </div> 
-                                            </div>
-                                        </div>
-                                        <div class="boxpos">
-                                            <div class="boxinfo">
-                                            <div class="boxsort">
-                                                <a class="boxitem1">
-                                                    <img src="../asset/logo/4.png" height="100" width="100">
-                                                </a>
-                                                <div class="boxitem2">
-                                                    <span class="topicname">Account Settings</span>
-                                                    <p class="topicinfo">Lorem ipsum dolor.</p>
-                                                </div>
-                                            </div> 
-                                            </div>
-                                        </div>
+                                        </div> 
+                                    </div>
                                 </div>
+                                <div class="boxpos">
+                                    <div class="boxinfo">
+                                        <div class="boxsort">
+                                            <a class="boxitem1">
+                                                <img src="../asset/logo/4.png" height="100" width="100">
+                                            </a>
+                                            <div class="boxitem2">
+                                                <span class="topicname">Account Settings</span>
+                                                <p class="topicinfo">Lorem ipsum dolor.</p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="boxpos">
+                                    <div class="boxinfo">
+                                        <div class="boxsort">
+                                            <a class="boxitem1">
+                                                <img src="../asset/logo/4.png" height="100" width="100">
+                                            </a>
+                                            <div class="boxitem2">
+                                                <span class="topicname">Account Settings</span>
+                                                <p class="topicinfo">Lorem ipsum dolor.</p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="boxpos">
+                                    <div class="boxinfo">
+                                        <div class="boxsort">
+                                            <a class="boxitem1">
+                                                <img src="../asset/logo/4.png" height="100" width="100">
+                                            </a>
+                                            <div class="boxitem2">
+                                                <span class="topicname">Account Settings</span>
+                                                <p class="topicinfo">Lorem ipsum dolor.</p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="boxpos">
+                                    <div class="boxinfo">
+                                        <div class="boxsort">
+                                            <a class="boxitem1">
+                                                <img src="../asset/logo/4.png" height="100" width="100">
+                                            </a>
+                                            <div class="boxitem2">
+                                                <span class="topicname">Account Settings</span>
+                                                <p class="topicinfo">Lorem ipsum dolor.</p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="boxpos">
+                                    <div class="boxinfo">
+                                        <div class="boxsort">
+                                            <a class="boxitem1">
+                                                <img src="../asset/logo/4.png" height="100" width="100">
+                                            </a>
+                                            <div class="boxitem2">
+                                                <span class="topicname">Account Settings</span>
+                                                <p class="topicinfo">Lorem ipsum dolor.</p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div> 
                             </div>
                         </div>
                     </div>
@@ -229,6 +229,7 @@
           </div>
         </footer>
     </section>
+    <script src="../js/suggestion.js"></script>
     <script src="../js/center_sup.js"></script>
 </body>
 </html>
