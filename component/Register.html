@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 
 <head>
   <meta charset="UTF-8">
@@ -25,10 +26,27 @@
   <script defer src="../node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
   <script defer src="../node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
   <script defer src="../node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
+=======
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../asset/logo/3.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="../css/Register.css">
+    <!--Database---------------------------------------------------------------------------------------------->
+    <script src="../js/userData.js"></script>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
+    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
+    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
+>>>>>>> pr/3
 
 </head>
 
 <body>
+<<<<<<< HEAD
   <!-- Navbar -------------------------------------------------------------------------------------------------------------->
   <section>
     <header>
@@ -121,9 +139,67 @@
             </div>
             <p class="text-center">Not yet account, <a href="register.html">Signup</a></p>
           </form>
+=======
+   <!-- Navbar -------------------------------------------------------------------------------------------------------------->
+   <section>
+    <header class="p-3 bg-black text-white sticky-top">
+      <div class="container" style="padding-left: 0 !important;">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-0">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <img src="../asset/logo/4.png" alt="logo" style="width: 40px;height: 40px">
+            </a>
+            
+              <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" style="margin-left: 3% !important;">
+                <li><a href="../index.html" class="nav-link px-2 text-white">Home</a></li>
+                <li><a href="#" class="nav-link px-2 text-secondary">Service</a></li>
+                <li><a href="#" class="nav-link px-2 text-secondary">Contact</a></li>
+                <li><a href="./help.html" class="nav-link px-2 text-secondary">Help</a></li>
+              </ul>
+              <form>
+                <input type="search" class="form-control form-control-dark" placeholder="Search" aria-label="Search">
+              </form>
+              <div class=" mx-0 mx-sm-2 my-2">
+                <button id="search" type="button" class="btn btn-outline-light me-2">Search</button>
+                <button id="login" type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#loginModal">Sign in</button>
+              </div>
+            
+>>>>>>> pr/3
         </div>
       </div>
+    </header>
+    <!-- Login Modal-------------------------- -->
+    <div id="loginModal" class="modal fade" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered text-black">
+            <div class="modal-content">
+                <form action="">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal Login Form</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="Username">Username<span class="text-danger">*</span></label>
+                        <input type="text" name="username" class="form-control" id="Username" placeholder="Enter Username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Password">Password<span class="text-danger">*</span></label>
+                            <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password">
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-check-input" type="checkbox" value="" id="remember" required>
+                            <label class="form-check-label" for="remember">Remember Me</label>
+                            <a href="#" class="float-end">Forgot Password</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer pt-4 ">
+                        <button type="button" class="btn btn-success mx-auto w-100 bg-warning text-black">Login</button>
+                    </div>
+                    <p class="text-center">Not yet account, <a href="#">Signup</a></p>
+                </form>
+            </div>
+        </div>
     </div>
+<<<<<<< HEAD
   </section>
   <section>
     <div class="container intropos p-sm-1 p-lg-5 my-sm-1 my-lg-5">
@@ -262,6 +338,147 @@
       </div>
     </footer>
   </section>
+=======
+    </section>
+
+    <section>
+    <div class="intropos p-sm-1 p-lg-5 my-sm-1 my-lg-5">
+        <div class="intro formdec" id="Menu">
+            <h2 style="text-align: center; padding-bottom: 32px;">Register as</h2>
+            <div class="d-grid gap-5 col-6 mx-auto p-2">
+                <button class="btn btn-warning" type="button" onclick="open1()">Partner</button>
+                <button class="btn btn-warning" type="button" onclick="open2()">User</button>
+            </div>
+        </div>
+    
+        <form class="formdec" id="for_partner">
+            <div style="padding-bottom: 8px;">
+                <h1 style="text-align: center;">Register for partner</h1>
+            </div>
+            <div class="form-outline mb-2">
+                <input class="form-control" id="fullnamepartner" type="text" placeholder="Your Full Name">
+            </div>
+            <div class="mb-1 mt-3">
+                <input class="form-control" id="Idnumpartner" type="text" placeholder="Your ID Number">
+            </div>
+            <div class="mb-1 mt-3">
+                <input class="form-control" id="Phonepartner" type="text" placeholder="Your Phone Number">
+            </div>
+            <div class="mb-1 mt-4">
+                <input class="form-control" id="Addresspartner" type="text" placeholder="Your Address">
+            </div>
+
+            <select class="form-select mb-1 mt-3" aria-label=".form-select-lg example">
+                <option selected>Type of Service</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+
+            <select class="form-select mb-1 mt-3" aria-label=".form-select-lg example" onchange="userChange()" id = "Selection">
+                <option selected>Certification</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="other">Other</option>
+            </select>
+            <p id = "demo"></p>
+
+            <div>
+                <input class="form-control mb-1 mt-3" id="Emailpartner" type="text" placeholder="Your Email">
+                <input class="form-control mb-1 mt-3" id="Passpartner" type="password" placeholder="Your Password">
+                <div id="passwordHelpBlock" class="form-text" style="margin-left: 1%; padding-bottom: 2%;">
+                    Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                </div>
+                <input class="form-control" id="Inputpartner" type="password" placeholder="Repeat your Password">
+            </div>
+            <div class="form-check mb-3 mt-3">
+                <input type="checkbox" class="form-check-input" id="Checkpartner">
+                <label class="form-check-label" for="Checkpartner">By clicking this button, you agree to our <a href="" style="color: rgba(82, 226, 25, 0.9);">Term of Services</a></label>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="submit" class="btn btn-warning me-md-2">Resgister</button>
+            </div>
+            
+        </form>
+    
+        <form class="formdec" id="for_user">
+            <div style="padding-bottom: 8px;">
+                <h1 style="text-align: center;">Register for user</h1>
+            </div>
+            <div class="form-outline mb-2">
+                <input class="form-control" id="fullnameuser" type="text" placeholder="Your Full Name">
+            </div>
+            <div class="mb-1 mt-3">
+                <input class="form-control" id="Idnumuser" type="text" placeholder="Your ID Number">
+            </div>
+            <div class="mb-1 mt-3">
+                <input class="form-control" id="Phoneuser" type="text" placeholder="Your Phone Number">
+            </div>
+            <div class="mb-1 mt-3">
+                <input class="form-control" id="Addressuser" type="text" placeholder="Your Address">
+            </div>
+            <div class="mb-1 mt-3">
+                <input class="form-control" id="Emailuser" type="text" placeholder="Your Email">
+                <input class="form-control mb-1 mt-3" id="Passuser" type="password" placeholder="Your Password">
+                <div id="passwordHelpBlock" class="form-text" style="color: white; margin-left: 1%;">
+                    Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                </div>
+                <input class="form-control" id="Inputuser" type="password" placeholder="Repeat your Password">
+            </div>
+            <div class="form-check mb-3 mt-3">
+                <input type="checkbox" class="form-check-input" id="Checkuser">
+                <label class="form-check-label" for="Checkuser">By clicking this button, you agree to our <a href="" style="color: rgba(82, 226, 25, 0.9);">Term of Services</a></label>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="submit" class="btn btn-warning me-md-2">Register</button>
+            </div>
+            
+        </form>
+    </div>
+    </section>
+
+    <!-- Footer -------------------------------------------------------------------------------------------------------------->
+    <section>
+      <footer
+        class="my-md-2 bg-black text-white border-top container-fluid p-5 m-0 justify-content-center align-items-center ">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-3">
+          <div class="col-lg-3">
+            <img class="mb-2" src="../asset/logo/2.png" alt="" width="100" height="100">
+            <small class="d-block mb-3 text-muted">© 2017–2021</small>
+            <h4>Home Care Project</h4>
+            <ul class="list-unstyled text-small">
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>Adress: </span> Tầng 6 - Số
+                  22 Thành Công - quận Ba Đình - Hà Nội </a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>Contact: </span> +84586954854
+                </a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>License: </span> 3DEC 7.0
+                </a></li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <img style="height:300px; width: 100%;" src="../asset/img/map.png">
+            </ul>
+          </div>
+          <div class="col-lg-3 d-flex flex-column align-items-center">
+            <h3> Follow Us </h3>
+            <ul class=" list-group list-unstyled text-small list-group-horizontal gap-2">
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                    class="fa-brands fa-facebook-square fa-2xl"></i></a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                    class="fa-brands fa-instagram-square fa-2xl"></i></a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                    class="fa-brands fa-twitter-square fa-2xl"></i></a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                    class="fa-brands fa-google-plus-square fa-2xl"></i></a></li>
+            </ul>
+          </div>
+  
+        </div>
+      </footer>
+  </section>
+    <script src="../js/Register.js"></script>
+>>>>>>> pr/3
 </body>
 
 </html>
