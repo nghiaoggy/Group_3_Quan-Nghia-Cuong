@@ -46,7 +46,6 @@ function signOut() {
 }
 
 
-<<<<<<< HEAD
 function userChange() {
     var x = document.getElementById("Selection").value;
     if (x==="other") {
@@ -76,5 +75,3 @@ function open1(){
     $('.supportmenu').css({"width": "100%", "display": "flex"})
     $('.menulistpos').css({"height" : "100%"})
 }
-=======
->>>>>>> pr/3
