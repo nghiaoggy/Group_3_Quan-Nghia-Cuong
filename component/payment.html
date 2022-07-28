@@ -1,52 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-        <link rel="shortcut icon" href="#" type="image/x-icon">
-        <!-- Main CSS--------------------------------------------------------------------------------------------->
-        <link rel="stylesheet" href="./css/main.css">
-        <link rel="stylesheet" href="./css/responsive.css">
-        <link rel="stylesheet" href="./css/animation.css">
 
-        <!-- Bootstrap 5 CSS-------------------------------------------------------------------------------------->
-        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+<head>
+    <title>HomeCare</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../asset/logo/3.png" type="image/x-icon">
 
+    <!-- Main CSS--------------------------------------------------------------------------------------------->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animation.css">
 
-    </head>
-    <body>
-        <section>
-            <header class="navbar">
-                
-            </header>
-        </section>
+    <!-- Bootstrap 5 CSS-------------------------------------------------------------------------------------->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/hover.css/css/hover.css">
 
-        <section>
-            <section class="slider">
+    <!--Database---------------------------------------------------------------------------------------------->
+    <script src="../js/userData.js"></script>
+    <!-- Main JS---------------------------------------------------------------------------------------------->
+    <script src="../js/main.js"></script>
 
-            </section>
-            <div class="main_container">
+    <!-- Extra Libraries--------------------------------------------------------------------------------------->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
+    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
+    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
+</head>
 
+<body>
+    <!-- Arrow Up -->
+    <div id="arrowUp" class="bg-warning d-none m-0 p-0 d-flex justify-content-center align-content-center"><a
+            href="http://" onclick="onTop()"><i class="fa-solid fa-chevron-up fa-lg"></i></i></a> </div>
+    <!-- Navbar -------------------------------------------------------------------------------------------------------------->
+    <section>
+        <header>
+            <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top" aria-label="Eighth navbar example">
+              <div class="container gap-lg-5 p-lg-2">
+                <a class="navbar-brand" href="../index.html"><img src="../asset/logo/4.png" alt="logo" style="width: 40px;height: 40px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+          
+                <div class="collapse navbar-collapse" id="navbarMain">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+                    <li class="nav-item">
+                      <a class="nav-link" href="../index.html" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Service</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="../component/help.html" >Help</a>
+                    </li>
+                   
+                  </ul>
+      
+                  <form>
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                  </form>
+      
+                  <div class=" mx-0 mx-sm-2 my-2">
+                    
+                    <button id="search" type="button" class="btn btn-outline-light me-2">Search</button>
+                    <button id="login" type="button" class="btn btn-warning" data-bs-toggle="modal"
+                      data-bs-target="#loginModal">Sign in</button>
+                    <div id="searchModal" class="dropdown-menu">
+        
+                    </div>
+                  </div>
+        
+                  <div id="user" class="dropdown text-end d-none">
+                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="../asset/avatar/a1.png" alt="mdo" class="rounded-circle" width="32" height="32">
+                    </a>
+                    <ul id="user-setting" class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                      <li><a class="dropdown-item" href="#">New project...</a></li>
+                      <li><a class="dropdown-item" href="#">Settings</a></li>
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="#" onclick="signOut()">Sign out</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+        </header>
+        <!-- Login Modal-------------------------- -->
+        <div id="loginModal" class="modal fade" role="dialog" aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered text-black">
+                <div class="modal-content">
+                    <form action="">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Modal Login Form</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="Username">Username<span class="text-danger">*</span></label>
+                                <input type="text" name="username" class="form-control" id="Username"
+                                    placeholder="Enter Username">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Password">Password<span class="text-danger">*</span></label>
+                                <input type="password" name="password" class="form-control" id="Password"
+                                    placeholder="Enter Password">
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-check-input" type="checkbox" value="" id="remember" required>
+                                <label class="form-check-label" for="remember">Remember Me</label>
+                                <a href="#" class="float-end">Forgot Password</a>
+                            </div>
+                        </div>
+                        <div class="modal-footer pt-4 ">
+                            <button type="button"
+                                class="btn btn-success mx-auto w-100 bg-warning text-black">Login</button>
+                        </div>
+                        <p class="text-center">Not yet account, <a href="register.html">Signup</a></p>
+                    </form>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section>
-            <footer>
+    <!-- Main Body -------------------------------------------------------------------------------------------------------------->
 
-            </footer>
-        </section>
+    <section>
+        <div class="container-fluid">
 
+            <!-- Cover-------------------------------------------------------------------------------------------------->
+            <section>
+                <div class="cover position-relative overflow-hidden text-center bg-dark text-light p-5">
+                    <div class="col-md-5 p-lg-5 mx-auto my-5 gap-1 gap-lg-3">
+                        <h1 class="display-4 fw-normal">Home Repair Services</h1>
+                        <p class="lead fw-normal">Quality repairs on all kinds of items.</p>
+                    </div>
+                    <div class="product-device shadow-sm d-none d-md-block"></div>
+                    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+                </div>
+            </section>
 
+            <!-- Body-------------------------------------------------------------------------------------------------->
+            <div class="container-fluid p-0 p-lg-5 m-0 m-lg-5">
+                <div class="container">
+                    <main>
+                      <div class="py-5 text-center">
+                        <img class="d-block mx-auto mb-4" src="../asset/logo/3.png" alt="" width="72" height="75">
+                        <h2>What To Expect After You Fill Out This Form</h2>
+                        <p class="lead">Services from HouseCare are trusted, reliable and professional. Please fill out the form completely, and we will get back to you as soon as possible.</p>
+                      </div>
+                  
+                      <div class="row g-5">
+                  
+                        <div class="col">
+                          <h4 class="mb-3">Billing address</h4>
+                          <form class="needs-validation was-validated" novalidate="">
+                            <div class="row g-3">
+                              <div class="col-sm-6">
+                                <label for="firstName" class="form-label">First name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                                <div class="invalid-feedback">
+                                  Valid first name is required.
+                                </div>
+                              </div>
+                  
+                              <div class="col-sm-6">
+                                <label for="lastName" class="form-label">Last name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                                <div class="invalid-feedback">
+                                  Valid last name is required.
+                                </div>
+                              </div>
+                  
+                              <div class="col-12">
+                                <label for="username" class="form-label">Username</label>
+                                <div class="input-group has-validation">
+                                  <span class="input-group-text">@</span>
+                                  <input type="text" class="form-control" id="username" placeholder="Username" required="">
+                                <div class="invalid-feedback">
+                                    Your username is required.
+                                  </div>
+                                </div>
+                              </div>
+                  
+                              <div class="col-12">
+                                <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                                <div class="invalid-feedback">
+                                  Please enter a valid email address for shipping updates.
+                                </div>
+                              </div>
+                  
+                              <div class="col-12">
+                                <label for="address" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+                                <div class="invalid-feedback">
+                                  Please enter your shipping address.
+                                </div>
+                              </div>
+                  
+                              <div class="col-12">
+                                <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+                                <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                              </div>
+                  
+                              <div class="col-md-5">
+                                <label for="country" class="form-label">Country</label>
+                                <select class="form-select" id="country" required="">
+                                  <option value="">Choose...</option>
+                                  <option>United States</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  Please select a valid country.
+                                </div>
+                              </div>
+                  
+                              <div class="col-md-4">
+                                <label for="state" class="form-label">State</label>
+                                <select class="form-select" id="state" required="">
+                                  <option value="">Choose...</option>
+                                  <option>California</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  Please provide a valid state.
+                                </div>
+                              </div>
+                  
+                              <div class="col-md-3">
+                                <label for="zip" class="form-label">Zip</label>
+                                <input type="text" class="form-control" id="zip" placeholder="" required="">
+                                <div class="invalid-feedback">
+                                  Zip code required.
+                                </div>
+                              </div>
+                            </div>
+                  
+                            <hr class="my-4">
+                  
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="same-address">
+                              <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+                            </div>
+                  
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="save-info">
+                              <label class="form-check-label" for="save-info">Save this information for next time</label>
+                            </div>
+                  
+                            <hr class="my-4">
+                  
+                            <h4 class="mb-3">Payment</h4>
+                  
+                            <div class="my-3">
+                              <div class="form-check">
+                                <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
+                                <label class="form-check-label" for="credit">Credit card</label>
+                              </div>
+                              <div class="form-check">
+                                <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
+                                <label class="form-check-label" for="debit">Debit card</label>
+                              </div>
+                              <div class="form-check">
+                                <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required="">
+                                <label class="form-check-label" for="paypal">PayPal</label>
+                              </div>
+                            </div>
+                  
+                            <div class="row gy-3">
+                              <div class="col-md-6">
+                                <label for="cc-name" class="form-label">Name on card</label>
+                                <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                                <small class="text-muted">Full name as displayed on card</small>
+                                <div class="invalid-feedback">
+                                  Name on card is required
+                                </div>
+                              </div>
+                  
+                              <div class="col-md-6">
+                                <label for="cc-number" class="form-label">Credit card number</label>
+                                <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                                <div class="invalid-feedback">
+                                  Credit card number is required
+                                </div>
+                              </div>
+                  
+                              <div class="col-md-3">
+                                <label for="cc-expiration" class="form-label">Expiration</label>
+                                <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                                <div class="invalid-feedback">
+                                  Expiration date required
+                                </div>
+                              </div>
+                  
+                              <div class="col-md-3">
+                                <label for="cc-cvv" class="form-label">CVV</label>
+                                <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                                <div class="invalid-feedback">
+                                  Security code required
+                                </div>
+                              </div>
+                            </div>
+                  
+                            <hr class="my-4">
+                  
+                            <button class="w-100 btn btn-warning btn-lg" type="submit">Continue to checkout</button>
+                          </form>
+                        </div>
+                      </div>
+                    </main>
+                  </div>
+               
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -------------------------------------------------------------------------------------------------------------->
+    <section>
+        <footer
+          class="my-md-2 bg-black text-white border-top container-fluid p-5 m-0 justify-content-center align-items-center ">
+          <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-3">
+            <div class="col-lg-3">
+              <img class="mb-2" src="../asset/logo/4.png" alt="" width="100" height="100">
+              <small class="d-block mb-3 text-muted">© 2017–2021</small>
+              <h4>Home Care Project</h4>
+              <ul class="list-unstyled text-small">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>Adress: </span> Tầng 6 - Số
+                    22 Thành Công - quận Ba Đình - Hà Nội </a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>Contact: </span> +84586954854
+                  </a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>License: </span> 3DEC 7.0
+                  </a></li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <img style="height:300px; width: 100%;" src="../asset/img/map.png">
+              </ul>
+            </div>
+            <div class="col-lg-3 d-flex flex-column align-items-center">
+              <h3> Follow Us </h3>
+              <ul class=" list-group list-unstyled text-small list-group-horizontal gap-2">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                      class="fa-brands fa-facebook-square fa-2xl"></i></a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                      class="fa-brands fa-instagram-square fa-2xl"></i></a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                      class="fa-brands fa-twitter-square fa-2xl"></i></a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><i
+                      class="fa-brands fa-google-plus-square fa-2xl"></i></a></li>
+              </ul>
+            </div>
+    
+          </div>
+        </footer>
+      </section>
+</body>
 
-        <!-- Main JS---------------------------------------------------------------------------------------------->
-        <script src="../js/main.js"></script>
-        <!-- Extra Libraries--------------------------------------------------------------------------------------->
-        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-        <script defer src="../node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
-        <script defer src="../node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
-        <script defer src="../node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
-    </body>
 </html>

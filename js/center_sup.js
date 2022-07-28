@@ -4,6 +4,29 @@ function open1(){
     $('.menusort').css({"padding-top" : "10px"})
     $('.menulistpos').css({"height" : "100%"})
 }
+
+function validate() {
+    var username = document.getElementById("Username");
+    var password = document.getElementById("Password");
+    var btnSubmit = document.getElementById("login");
+    var avatar = document.getElementById("user");
+
+    if (username.value == "admin" && password.value == "admin") {
+        btnSubmit.classList.add("d-none");
+        avatar.classList.remove("d-none");
+    } else {
+        alert("Wrong username or password");
+    }
+}
+
+function signOut() {
+    var btnSubmit = document.getElementById("login");
+    var avatar = document.getElementById("user");
+    avatar.classList.add("d-none");
+    btnSubmit.classList.remove("d-none");
+}
+
+
 // getting all required elements
 const searchWrapper = document.querySelector(".search-input");
 const inputBox = searchWrapper.querySelector("input");

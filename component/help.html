@@ -8,68 +8,82 @@
     <title>Register Page</title>
     <link rel="stylesheet" href="../css/center_sup.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script defer src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script defer src="../node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
     <script defer src="../node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
     <script defer src="../node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="../node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
     <section>
         <header class="d-flex p-3 bg-black text-white sticky-top" style="justify-content: space-between;">
-            <div class="container gap-lg-5 p-lg-2">
-                <div class="d-flex flex-wrap align-items-center justify-content-lg-start gap-5">
-                    <div style="display: flex; margin-left: 5%;">
-                        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                            <img src="../asset/logo/4.png" alt="logo" style="width: 40px;height: 40px">
-                        </a>
-                    </div>
-                    <span class="headtext">Support Centre</span>
-                </div>
+            <div class="d-flex flex-wrap align-items-center justify-content-flex-start gap-2" style="padding-left: 2%;">
+                <a href="../index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img src="../asset/logo/4.png" alt="logo" style="width: 40px;height: 40px">                        
+                </a>
+                <span class="headtext">Support Centre</span>
             </div>
-            <div class="iconpos">
-                <button id="login" type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#loginModal" style="position: relative; box-sizing: border-box;">Sign in</button>
-                <div class="mybtn">
-                    <button type="button" class="btn btn-warning" onclick="open1()">
-                        <i class="fa-solid fa-angles-down"></i>
-                    </button>
+            <div class="iconpos btn-group">
+                <button id="login" type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#loginModal" style="box-sizing: border-box;">Sign in</button>
+                <div id="user" class="dropdown text-start d-none">
+                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="../asset/avatar/a1.png" alt="mdo" class="rounded-circle" width="32" height="32">
+                    </a>
+                    <ul id="user-setting" class="dropdown-menu text-small p-1 p-lg-2 " aria-labelledby="dropdownUser1">
+                      <li><a class="dropdown-item" href="#">New project...</a></li>
+                      <li><a class="dropdown-item" href="#">Settings</a></li>
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="#" onclick="signOut()">Sign out</a></li>
+                    </ul>
                 </div>
+                <button type="button" class="mybtn btn-warning" onclick="open1()">
+                    <i class="fa-solid fa-angles-down"></i>
+                </button>
             </div>
+        
         </header>
         <!-- Login Modal-------------------------- -->
-        <div id="loginModal" class="modal fade" role="dialog" aria-hidden="true" tabindex="-1">
+        <div id="loginModal" class="modal" role="dialog" aria-hidden="true" tabindex="-1" data-bs-backdrop="static">
             <div class="modal-dialog modal-dialog-centered text-black">
-                <div class="modal-content">
-                    <form action="">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Modal Login Form</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="mb-3">
-                                <label for="Username">Username<span class="text-danger">*</span></label>
-                            <input type="text" name="username" class="form-control" id="Username" placeholder="Enter Username">
-                            </div>
-                            <div class="mb-3">
-                                <label for="Password">Password<span class="text-danger">*</span></label>
-                                <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password">
-                            </div>
-                            <div class="mb-3">
-                                <input class="form-check-input" type="checkbox" value="" id="remember" required>
-                                <label class="form-check-label" for="remember">Remember Me</label>
-                                <a href="#" class="float-end">Forgot Password</a>
-                            </div>
-                        </div>
-                        <div class="modal-footer pt-4 ">
-                            <button type="button" class="btn btn-success mx-auto w-100 bg-warning text-black">Login</button>
-                        </div>
-                        <p class="text-center">Not yet account, <a href="#">Signup</a></p>
-                    </form>
-                </div>
+              <div class="modal-content p-1 p-lg-3">
+                <form action="">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Modal Login Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="mb-3">
+                      <label for="Username">Username<span class="text-danger">*</span></label>
+                      <input type="text" name="username" class="form-control" id="Username" placeholder="Enter Username"
+                        required>
+                    </div>
+      
+                    <div class="mb-3">
+                      <label for="Password">Password<span class="text-danger">*</span></label>
+                      <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password"
+                        required>
+                    </div>
+                    <div class="mb-3">
+                      <input class="form-check-input" type="checkbox" value="" id="remember" required>
+                      <label class="form-check-label" for="remember">Remember Me</label>
+                      <a href="#" class="float-end">Forgot Password</a>
+                    </div>
+                  </div>
+                  <div class="modal-footer pt-4 ">
+                    <button type="button" id="submit" onclick="validate()" data-bs-dismiss="modal"
+                      class="btn btn-success mx-auto w-100 bg-warning text-black" value="Login">Login</button>
+                  </div>
+                  <p class="text-center">Not yet account, <a href="./Register.html">Signup</a></p>
+                </form>
+              </div>
             </div>
-        </div>
+          </div>
     </section>
-    <div class="mybody" id="largescr">
+    <section>
+    <div class="mybody">
         <div class="supportmenu" role="list">
             <div class="menusort">
                 <div class="menulist">
@@ -84,27 +98,26 @@
             </div>
         </div>
         <div class="helpother">
-            <div class="helpmain">
-                <div class="helpalign">
-                    <div class="helpsort">
-                        <div class="supportbanner">
-                            <span class="supporttext">
-                                How can we help you?
-                            </span>
-                            <div class="wrapper">
-                                <div class="search-input">
-                                    <a href="" target="_blank" hidden></a>
-                                    <input class="form-control" id="formFileLg" type="search" style="border-bottom-left-radius: 0px; border-top-left-radius: 0px;" placeholder="Search for help article...">
-                                    <div class="autocom-box">
-                                    </div>
-                                    <div class="icon"><i class="fa fa-search"></i></div>
+            <div class="helpalign">
+                <div class="helpsort">
+                    <div class="supportbanner">
+                        <span class="supporttext">
+                            How can we help you?
+                        </span>
+                        <div class="wrapper">
+                            <div class="search-input">
+                                <a href="" target="_blank" hidden></a>
+                                <input class="form-control" id="formFileLg" type="search" style="border-bottom-left-radius: 0px; border-top-left-radius: 0px;" placeholder="Search for help article...">
+                                <div class="autocom-box">
                                 </div>
+                                <div class="icon"><i class="fa fa-search"></i></div>
                             </div>
                         </div>
-                        <div class="topic">
-                            <div class="topicbanner">
-                                <span class="topictext">Popular topics</span>
-                            </div>
+                    </div>
+                    <div class="topic">
+                        <div class="topicbanner">
+                            <span class="topictext">Popular topics</span>
+                        </div>
                             <div class="boxalign">
                                 <div class="boxpos">
                                     <div class="boxinfo">
@@ -114,7 +127,7 @@
                                             </a>
                                             <div class="boxitem2">
                                                 <span class="topicname">Account Settings</span>
-                                                <p class="topicinfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aliquid in praesentium molestiae pariatur officiis adipisci ut architecto consequuntur expedita similique ad, perspiciatis quo esse mollitia. Aliquid consequuntur molestias delectus.</p>
+                                                <p class="topicinfo">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                             </div>
                                         </div> 
                                     </div>
@@ -184,20 +197,19 @@
                                         </div> 
                                     </div>
                                 </div> 
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </section>
     <section>
-        <footer
-          class="my-md-2 bg-black text-white border-top container-fluid p-5 m-0 justify-content-center align-items-center ">
+        <footer class="bg-black text-white border-top container-fluid p-5 m-0 justify-content-center align-items-center ">
           <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-3">
             <div class="col-lg-3">
               <img class="mb-2" src="../asset/logo/2.png" alt="" width="100" height="100">
-              <small class="d-block mb-3 text-muted">© 2017–2021</small>
+              <small class="d-block mb-3 text-muted">© 2017–2022</small>
               <h4>Home Care Project</h4>
               <ul class="list-unstyled text-small">
                 <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><span>Adress: </span> Tầng 6 - Số
@@ -228,7 +240,7 @@
     
           </div>
         </footer>
-    </section>
+      </section>
     <script src="../js/suggestion.js"></script>
     <script src="../js/center_sup.js"></script>
 </body>
