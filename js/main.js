@@ -9,7 +9,7 @@ function navbarChange() {
         navbar.classList.add("bg-black");
         navbar.classList.remove("bg-transparent");
         document.getElementById("arrowUp").classList.remove("d-none")
-        document.getElementById("")
+
     } else {
         navbar.classList.remove("bg-dark");
         navbar.classList.add("bg-transparent");
@@ -46,3 +46,32 @@ function signOut() {
 }
 
 
+function userChange() {
+    var x = document.getElementById("Selection").value;
+    if (x==="other") {
+        document.getElementById("demo").innerHTML = `<input class="form-control ml-3 mt-3" id="Certification" type="text" placeholder="Your Certification">`;
+    }
+    else document.getElementById("demo").innerHTML = ``;
+}
+function open1(){
+    var x = document.getElementById("Menu")
+    x.style.display = 'none';
+    x = document.getElementById("for_partner")
+    x.style.display = 'block';
+}
+function open2(){
+    var x = document.getElementById("Menu")
+    x.style.display = 'none';
+    x = document.getElementById("for_user")
+    x.style.display = 'block';
+}
+
+function ktra(){
+    let email = String(document.getElementById("disableEmail"))
+}
+
+function open1(){
+    $('.helpother').css({"display": "none"})
+    $('.supportmenu').css({"width": "100%", "display": "flex"})
+    $('.menulistpos').css({"height" : "100%"})
+}
