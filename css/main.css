@@ -65,6 +65,7 @@ body{
     overflow: hidden !important;
     overflow-y: scroll !important ;
     font-family: Lato,sans-serif;
+    padding-right: 0 !important
 }
 
 #arrowUp{
@@ -110,6 +111,11 @@ body{
 
 .container-fluid{
     padding: 0 !important;
+}
+
+.modal-open{
+    overflow: auto;
+    padding-right:0 !important;
 }
 
 /* Slider------------------------------------------------ */
